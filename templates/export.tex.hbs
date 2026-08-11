@@ -2,6 +2,7 @@
 %\Logo <{{storage.templates}}/latex/ascii-logo.png>
 
 {{~#*inline "items"}}
+
 {{#each this}}{{inc @index}} & {{ name }} {{#if unit}} ({{ unit }}) {{/if}} & {{ amount}} & {{ price }} & {{ cost }} \\
 {{/each~}}
 {{/inline}}
@@ -11,6 +12,7 @@
 \multicolumn{4}{r}{Netto MwSt.}   & {{gross_sum}}  \\
 \multicolumn{4}{r}{+MwSt. {{tax_value}}\%}   & {{tax_sum}}  \\
 {{~else}}
+
 \multicolumn{4}{r}{MwSt. 0\%}  & {{gross_sum}}  \\
 {{/if~}}
 {{/each~}}
@@ -22,6 +24,8 @@
 {{/inline}}
 
 {{#with document}}
+
+
 \lochermarke
 \faltmarken
 \fenstermarken
@@ -52,6 +56,7 @@
 \Postvermerk         {}
 \Adresse             <{{ client.address }}>
 
+
 {{#if ../is_invoice}}
 \Datum               <{{invoice.date}}>
 \Betreff             <Rechnung{{#if invoice.official}}\newline {{invoice.official}}{{/if}}>
@@ -66,6 +71,7 @@
 
 
 
+
 \Veranstaltung       <{{ event.name }}>
 \Anrede              <{{ client.addressing }},}
 \Gruss               {Mit freundlichen Grüßen}{1cm}
@@ -77,11 +83,13 @@
 \begin{ascii-brief}
 
 
+
 {{#if ../is_invoice}}
 wir bedanken uns für Ihren Auftrag für das Catering am {{ event.date }} und erlauben uns Ihnen folgende Rechnung zu stellen:
 {{else}}
 hiermit möchten wir Ihnen für die gastronomische Betreuung Ihrer Veranstaltung am {{ event.date }} folgendes Angebot unterbreiten:
 {{/if}}
+
 
 \begin{center}
 \begin{tabular}{rp{7cm}rrr}
@@ -99,6 +107,7 @@ hiermit möchten wir Ihnen für die gastronomische Betreuung Ihrer Veranstaltung
 {{/if~}}
 {{/with}}
 
+
 \bottomrule[1pt]
 {{~#if ../is_invoice}}
   {{~#with invoice}}{{~> foo}}{{/with}}
@@ -106,10 +115,14 @@ hiermit möchten wir Ihnen für die gastronomische Betreuung Ihrer Veranstaltung
  {{~#with offer}}{{~> foo}}{{/with}}
 {{/if}}
 
+
 {{#if ../is_invoice}}
+
 Wir bitten um eine Begleichung des Betrags innerhalb von 14 Tagen nach Erhalt der Rechnung.
 {{/if}}
 
+
 \end{ascii-brief}
 \end{document}
+
 {{/with}}

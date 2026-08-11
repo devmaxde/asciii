@@ -53,7 +53,7 @@ impl HelperDef for IncHelper {
     #[allow(clippy::extra_unused_lifetimes)]
     fn call<'reg: 'rc, 'rc>(
         &self,
-        h: &Helper<'_, '_>,
+        h: &Helper<'_>,
         _: &Handlebars,
         _: &Context,
         _: &mut RenderContext<'_, '_>,
@@ -76,7 +76,7 @@ impl HelperDef for CountHelper {
     #[allow(clippy::extra_unused_lifetimes)]
     fn call<'reg: 'rc, 'rc>(
         &self,
-        h: &Helper<'_, '_>,
+        h: &Helper<'_>,
         _: &Handlebars,
         _: &Context,
         _: &mut RenderContext<'_, '_>,

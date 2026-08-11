@@ -1,5 +1,6 @@
 use anyhow::{bail, format_err, Error};
 use clap::ArgMatches;
+use crate::cli::ArgMatchesExt as _;
 
 use asciii::project::Project;
 use asciii::{storage, util};
@@ -63,16 +64,23 @@ pub fn git_remote() -> Result<(), Error> {
         let repo = &r.repo;
 
         for remote_name in repo.remotes().unwrap().iter() {
-            if let Some(name) = remote_name {
+            // git2 >= 0.20 returns `Result` from these accessors, non-utf8 values are an error
+            if let Ok(Some(name)) = remote_name {
                 if let Ok(remote) = repo.find_remote(name) {
+                    let remote_name = remote.name().ok().flatten().unwrap_or("no name");
                     println!(
                         "{}",
                         lformat!(
                             "{}  {} (fetch)\n{}  {} (push)",
-                            remote.name().unwrap_or("no name"),
+                            remote_name,
                             remote.url().unwrap_or("no url"),
-                            remote.name().unwrap_or("no name"),
-                            remote.pushurl().or_else(|| remote.url()).unwrap_or(""),
+                            remote_name,
+                            remote
+                                .pushurl()
+                                .ok()
+                                .flatten()
+                                .or_else(|| remote.url().ok())
+                                .unwrap_or(""),
                         )
                     );
                 } else {

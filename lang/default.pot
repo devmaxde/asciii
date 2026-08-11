@@ -8,671 +8,671 @@ msgid ""
 msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 
-#: /Users/hendrik/code/rust/asciii/src/actions/mod.rs:61
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/actions/mod.rs:61
 msgid "INum"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/actions/mod.rs:62
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/actions/mod.rs:62
 msgid "Designation"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/actions/mod.rs:63
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/actions/mod.rs:63
 msgid "Date"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/actions/mod.rs:64
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/actions/mod.rs:64
 msgid "InvoiceDate"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/actions/mod.rs:65
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/actions/mod.rs:65
 msgid "Caterer"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/actions/mod.rs:66
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/actions/mod.rs:66
 msgid "Responsible"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/actions/mod.rs:67
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/actions/mod.rs:67
 msgid "Payed on"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/actions/mod.rs:68
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/actions/mod.rs:68
 msgid "Amount"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/actions/mod.rs:69
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/actions/mod.rs:69
 msgid "Canceled"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/actions/mod.rs:196
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/actions/mod.rs:196
 msgid "do you realy want to delete {}?"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/actions/mod.rs:220
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/actions/mod.rs:220
 msgid "we could get rid of: {}"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:15
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:17
 msgid "The ascii invoicer III"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:20
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:23
 msgid "Print errors with full backtrace"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:27
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:31
 msgid "set's up a new instance"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:28
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:32
 msgid "set's up a new instance. Clones the repository and initializes the global config file."
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:30
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:34
 msgid "Remote repository"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:33
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:37
 msgid "where to clone to"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:38 /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:72 /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:286 /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:305 /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:540 /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:723
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:41 /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:71 /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:294 /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:314 /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:559 /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:746
 msgid "Override the configured editor"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:47
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:49
 msgid "Create a new project"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:50
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:52
 msgid "Project name"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:54
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:56
 msgid "Manually set the date of the project"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:61
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:62
 msgid "Override the description of the project"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:66
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:66
 msgid "Use a specific template"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:78
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:76
 msgid "Override the manager of the project"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:84
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:81
 msgid "Manually set the start time of the project"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:89
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:85
 msgid "Manually set the end time of the project"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:94
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:89
 msgid "Overrides the duration of the event"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:99
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:93
 msgid "Do not edit the file after creation"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:106
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:101
 msgid "List Projects"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:109
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:104
 msgid "list archived projects of a specific year, defaults to the current year"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:118 /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:553 /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:579
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:112 /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:571 /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:596
 msgid "List projects from that year, archived or not"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:126
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:119
 msgid "Add extra fields to print for each project listed"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:133
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:125
 msgid "Filter selection by field content"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:140
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:131
 msgid "Show Errors for each project"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:145
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:137
 msgid "Show colors"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:150
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:143
 msgid "Show colors for each project"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:156
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:150
 msgid "Show non-verbose list"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:160
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:155
 msgid "Print in csv form"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:166
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:162
 msgid "Opposite of simple"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:173
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:170
 msgid "Sort by :"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:180 /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:587
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:176 /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:603
 msgid "List all projects, ever"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:185
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:182
 msgid "List templates"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:191
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:189
 msgid "List years in archive"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:195
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:194
 msgid "List paths to each project file"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:201
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:201
 msgid "List broken projects  without project file"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:207
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:208
 msgid "List all computed data fields that can be used with --details"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:213
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:215
 msgid "Print nothing, expect the fields supplied via --details"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:220
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:223
 msgid "Open storage path"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:228 /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:267 /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:361 /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:452 /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:477 /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:499 /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:652 /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:694 /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:788 /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:813 /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:847 /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:872
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:231 /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:275 /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:370 /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:469 /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:493 /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:514 /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:674 /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:717 /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:812 /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:838 /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:873 /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:898
 msgid "Search term, possibly event name"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:233
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:236
 msgid "Open path to templates instead"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:239
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:243
 msgid "Open path to created documents instead"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:245 /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:513
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:250 /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:530
 msgid "Open path to current binary instead"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:251 /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:519
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:257 /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:537
 msgid "Open invoice file"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:257 /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:525
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:264 /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:544
 msgid "Open offer file"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:265
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:273
 msgid "Edit a specific project"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:273 /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:388 /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:466 /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:482 /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:668
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:281 /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:399 /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:483 /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:498 /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:692
 msgid "Pick an archived project"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:280 /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:299
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:287 /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:307
 msgid "Edit a template file, use `list --templates` to learn which."
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:296
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:304
 msgid "Edit the meta data store"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:316
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:324
 msgid "Move a Project into the archive"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:318
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:326
 msgid "Search terms to match the project"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:325
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:333
 msgid "Archives the project, even though it is not completely valid"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:331
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:340
 msgid "Archives all projects that can be archived"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:337
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:347
 msgid "Override the year"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:345
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:354
 msgid "Move a Project out of the archive"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:347
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:356
 msgid "Specify the archive"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:351
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:360
 msgid "The name of the project, duh!"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:359
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:368
 msgid "Display a specific project"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:367
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:376
 msgid "Show project as JSON"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:372
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:382
 msgid "Show project as iCal"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:377
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:388
 msgid "Show project as raw yaml"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:381
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:393
 msgid "Shows a particular detail"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:396
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:406
 msgid "Shows fields that can be filled automatically"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:402
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:413
 msgid "Shows the errors in this project"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:408
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:420
 msgid "Show fields in templates that are filled"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:415
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:428
 msgid "List files that belong to a project"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:419
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:433
 msgid "Display values in invoice mode"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:425
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:440
 msgid "Display values in offer mode"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:436
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:452
 msgid "Show as csv"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:450
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:467
 msgid "Set a value in a project file"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:457
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:474
 msgid "Which field to set"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:462
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:479
 msgid "What to put in the field"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:475
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:491
 msgid "Assign invoice id to project"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:491
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:506
 msgid "Show storage path"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:503
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:518
 msgid "Shows templates path instead"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:508
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:524
 msgid "Shows path to created documents instead"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:533
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:553
 msgid "Open an archive instead"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:545
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:563
 msgid "Open the working directory in an editor"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:551
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:569
 msgid "Produces a CSV report for a given year"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:564
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:581
 msgid "List archived projects of a specific year, defaults to the current year"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:573
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:589
 msgid "Include open tasks"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:593
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:610
 msgid "Experimental: open dues"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:596 /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:602
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:613 /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:620
 msgid "Show unpayed wages"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:610
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:629
 msgid "Creates documents from projects"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:614
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:633
 msgid "Manually pass a file path"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:620
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:638
 msgid "Manually pass a output folder"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:626
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:643
 msgid "Do it against better judgement"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:631
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:649
 msgid "Only create the PDF file"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:636 /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:688
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:655 /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:710
 msgid "Do not create final output file"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:642
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:662
 msgid "Only prints to stdout"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:647
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:668
 msgid "Open the pdf file afterwards."
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:657
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:679
 msgid "Produce an offer document"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:663
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:686
 msgid "Produce an invoice document"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:676
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:699
 msgid "Use a particular template"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:684
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:706
 msgid "Deletes a project"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:699 /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:792 /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:817 /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:852 /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:876
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:722 /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:816 /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:842 /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:878 /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:902
 msgid "list archived projects"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:715
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:737
 msgid "Show and edit your config"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:717
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:739
 msgid "Edit your config"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:729
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:751
 msgid "Show a specific config value"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:736
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:757
 msgid "Show default config"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:742
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:764
 msgid "set the root folder in the config"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:748
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:769
 msgid "Show the location of the config file"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:754
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:776
 msgid "Create config file."
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:763
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:786
 msgid "(experimental) starts interactive shell"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:767
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:790
 msgid "Show your name from config"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:772
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:795
 msgid "Show the working tree status"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:777
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:800
 msgid "Pull and merge new commits from remote"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:780
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:803
 msgid "git pull with --rebase"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:786
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:810
 msgid "git diff"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:799
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:822
 msgid "Changes between the index and your last commit"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:804 /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:824 /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:859 /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:883
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:828 /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:848 /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:884 /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:908
 msgid "A template"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:811
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:836
 msgid "Add file contents to the git-index"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:829
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:854
 msgid "Add all projects"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:837
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:863
 msgid "Save changes locally"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:841
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:867
 msgid "Upload locally saved changes to the remote"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:845
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:871
 msgid "cleans changes and untracked files in project folder"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:865
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:891
 msgid "equals git stash"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:866
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:892
 msgid "equals git pop"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:870
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:896
 msgid "Show commit logs"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:890
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:916
 msgid "Show information about the remote"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:895
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:921
 msgid "Generates completion for bash, zsh, etc"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:897
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:923
 msgid "what shell to generate completion for (bash, zsh, fish,PowerShell)"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:906
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:931
 msgid "Prints version information"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:911
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:936
 msgid "show also build information"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:916
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:942
 msgid "show verbose version as json"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:922
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:949
 msgid "Opens the online documentation, please read it"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:926
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:953
 msgid "Opens the WebInterface 🤯"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:1016
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:1045
 msgid "please specify either bash, zsh, fish or powershell"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/app.rs:1027
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/app.rs:1057
 msgid "Date Format must be DD.MM.YYYY"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/subcommands/git.rs:70
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/subcommands/git.rs:73
 msgid "{}  {} (fetch)\n{}  {} (push)"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/subcommands/git.rs:79
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/subcommands/git.rs:87
 msgid "no remote"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/subcommands/git.rs:82
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/subcommands/git.rs:90
 msgid "no remote name"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/subcommands/mod.rs:50
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/subcommands/mod.rs:51
 msgid "asciii asciii? {face}"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/subcommands/mod.rs:56
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/subcommands/mod.rs:57
 msgid "{face} that's not a command"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/subcommands/mod.rs:62
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/subcommands/mod.rs:63
 msgid "what do you think this is, a shell? {face}"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/subcommands/mod.rs:377
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/subcommands/mod.rs:378
 msgid "Do you want to set the invoice number in {:?} to {}?"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/subcommands/mod.rs:460
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/subcommands/mod.rs:461
 msgid "You have to provide either a search term or path"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/subcommands/mod.rs:557
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/subcommands/mod.rs:558
 msgid "do you want to set your name?"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/subcommands/mod.rs:560
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/subcommands/mod.rs:561
 msgid "Is your name {:?}"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/subcommands/mod.rs:567
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/subcommands/mod.rs:568
 msgid "What is your name?"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/bin/cli/subcommands/mod.rs:691 /Users/hendrik/code/rust/asciii/src/bin/cli/subcommands/mod.rs:700
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/subcommands/mod.rs:692 /Users/privat/Documents/GitHub/ascii/asciii/src/bin/cli/subcommands/mod.rs:701
 msgid "{} does not exist"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/document_export/mod.rs:225
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/document_export/mod.rs:225
 msgid "WARNING: Can't make sense of {}"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/document_export/mod.rs:267
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/document_export/mod.rs:267
 msgid "Project file is younger than pdf, continue anyway?"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/lib.rs:70
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/lib.rs:68
 msgid "Documentation at: {}"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/project/computed_field.rs:86
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/project/computed_field.rs:86
 msgid "{} days"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/project/computed_field.rs:88 /Users/hendrik/code/rust/asciii/src/project/computed_field.rs:89
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/project/computed_field.rs:88 /Users/privat/Documents/GitHub/ascii/asciii/src/project/computed_field.rs:89
 msgid "{} weeks"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/project/error.rs:45 /Users/hendrik/code/rust/asciii/src/project/error.rs:61
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/project/error.rs:45 /Users/privat/Documents/GitHub/ascii/asciii/src/project/error.rs:61
 msgid "{:?} is invalid: {}"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/project/mod.rs:346
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/project/mod.rs:346
 msgid "weird task edgecase in {:?}:\n{:?}"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/project/mod.rs:359
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/project/mod.rs:359
 msgid "Create an Invoice"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/project/mod.rs:370
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/project/mod.rs:370
 msgid "{}: Hungry employees!"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/project/mod.rs:374
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/project/mod.rs:374
 msgid "Pay {}\nYou have had the money for {} days!"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/project/mod.rs:388
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/project/mod.rs:388
 msgid "Inquire about: \"{event}\"!"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/project/mod.rs:389
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/project/mod.rs:389
 msgid "{inum }{event:?} on {invoice_date} ({days} days ago) was already invoiced but is still not marked as payed.\nPlease check for incoming payments! You can ask {client} ({mail})."
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/project/mod.rs:399
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/project/mod.rs:399
 msgid "{rnum}: payment is {weeks} weeks late: \"{event}\""
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/project/mod.rs:413
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/project/mod.rs:413
 msgid "Archive {}"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/project/mod.rs:414
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/project/mod.rs:414
 msgid "{:?} has been finished for {} days, get rid of it!"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/project/spec_yaml.rs:58
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/project/spec_yaml.rs:58
 msgid "Responsible: {}"
 msgstr ""
 
-#: /Users/hendrik/code/rust/asciii/src/project/yaml_provider.rs:132
+#: /Users/privat/Documents/GitHub/ascii/asciii/src/project/yaml_provider.rs:132
 msgid "{} ({:?})"
 msgstr ""
 

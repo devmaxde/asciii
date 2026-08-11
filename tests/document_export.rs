@@ -1,3 +1,11 @@
+//! Golden-file tests for the LaTeX export.
+//!
+//! `templates/export.tex.hbs` is whitespace sensitive: since handlebars 4 a block
+//! tag sitting alone on a line is "standalone" and gets swallowed together with its
+//! newline, which handlebars 3 kept. The seemingly stray blank lines around
+//! `{{#if}}`/`{{/with}}`/`{{~else}}` in that template put those newlines back, so
+//! don't tidy them away without re-running these tests.
+
 use asciii::{
     document_export::fill_template,
     project::{

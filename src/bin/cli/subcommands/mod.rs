@@ -10,6 +10,7 @@ use std::{
 use anyhow::{bail, format_err, Context, Error};
 use chrono::prelude::*;
 use clap::ArgMatches;
+use crate::cli::ArgMatchesExt as _;
 use yaml_rust::Yaml;
 
 use asciii::{

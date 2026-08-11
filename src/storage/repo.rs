@@ -155,7 +155,8 @@ impl Repository {
         for entry in git_statuses.iter() {
             let status: GitStatus = entry.status().into();
 
-            if let Some(path) = entry.path() {
+            // git2 >= 0.20 returns `Result` here instead of `Option`, non-utf8 paths are an error
+            if let Ok(path) = entry.path() {
                 let path = repo_path.join(PathBuf::from(path));
                 if path.is_file() {
                     if let Some(parent) = path.parent() {
