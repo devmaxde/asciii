@@ -1,6 +1,7 @@
 use anyhow::Error;
 use clap::ArgMatches;
-use crate::cli::ArgMatchesExt as _;
+
+use crate::cli::ArgMatchesExt;
 
 use asciii::{
     print,

@@ -25,10 +25,53 @@ include = [
     "lang/*",
     "src/default_config.yml",
     "src/**/*.rs",
+    "src/zugferd/*.icc",
+    "src/zugferd/*.md",
     "tests/**/*.rs",
-    "webapp/public/*",
 ]
-exclude = ["*.pdf", "webapp/**/*", "pkg"]
+exclude = ["*.pdf", "pkg"]
+
+[features]
+default = [
+    "cli",
+    "document_export",
+    "git_statuses",
+    "serialization",
+    "deserialization",
+    "shell",
+    "localize",
+    "zugferd",
+    "tui",
+]
+travis_compatible = [
+    "cli",
+    "document_export",
+    "git_statuses",
+    "serialization",
+    "deserialization",
+    "shell",
+    "meta",
+    "version_string",
+    "par_open",
+]
+mini_tool = ["cli", "document_export"]
+full_tool = ["travis_compatible", "localize"]
+document_export = ["handlebars", "serialization"]
+zugferd = ["document_export", "lopdf"]
+serde_base = ["serde", "serde_derive"]
+serialization = ["serde_base", "serde_json"]
+deserialization = ["serde_base", "serde_yaml", "ordered-float", "num-traits"]
+meta = ["serialization", "deserialization"]
+git_statuses = ["git2"]
+shell = ["rustyline"]
+version_string = []
+localize = []
+cli = []
+nightly = []
+par_open = ["rayon"]
+tui = ["ratatui", "libc", "crossterm"]
+manual = []
+
 
 [dependencies]
 log = "0.4"
@@ -45,17 +88,13 @@ custom_derive = "0.1"
 open = "5"
 crowbook-intl-runtime = "0.1"
 rayon = { version = "1.12", optional = true }
-itertools = "0.15"
-rustyline = { version = "18", optional = true, features = ["derive"] }
+rustyline = { version = "19", optional = true, features = ["derive"] }
 linked-hash-map = { version = "0.5", features = ["serde_impl"] }
-dirs = "6"
+dirs = "7"
 term = "1.0"
 thiserror = "2.0"
 anyhow = "1.0"
 
-actix = { version = "0.13", optional = true }
-actix-web = { version = "4", optional = true }
-actix-files = { version = "0.6", optional = true }
 
 bill = { version = "0.4", features = ["serialization"] }
 icalendar = "0.17"
@@ -82,50 +121,18 @@ toml = "1.0"
 git2 = { version = "0.21", default-features = false, optional = true }
 color-backtrace = "0.7"
 
+# feature: zugferd (e-invoice XML embedded into the invoice PDF)
+lopdf = { version = "0.47", default-features = false, optional = true }
+
+# feature: tui
+ratatui = { version = "0.30", optional = true }
+libc = { version = "0.2", optional = true }
+# same crossterm as ratatui; `use-dev-tty` polls the terminal instead of registering it with kqueue (macOS),
+# so handing stdin to pdflatex and back does not break keyboard input
+crossterm = { version = "0.29", optional = true, features = ["use-dev-tty"] }
+
 [dev-dependencies]
 pretty_assertions = "1.4"
-
-[features]
-default = [
-    "cli",
-    "document_export",
-    "git_statuses",
-    "serialization",
-    "deserialization",
-    "server",
-    "shell",
-    "localize",
-]
-travis_compatible = [
-    "cli",
-    "document_export",
-    "git_statuses",
-    "serialization",
-    "deserialization",
-    "shell",
-    "meta",
-    "version_string",
-    "par_open",
-]
-mini_tool = ["cli", "document_export"]
-full_tool = ["travis_compatible", "localize"]
-server = ["actix", "actix-files", "actix-web"]
-webapp = ["server"]
-
-document_export = ["handlebars", "serialization"]
-serde_base = ["serde", "serde_derive"]
-serialization = ["serde_base", "serde_json"]
-deserialization = ["serde_base", "serde_yaml", "ordered-float", "num-traits"]
-
-meta = ["serialization", "deserialization"]
-git_statuses = ["git2"]
-shell = ["rustyline"]
-version_string = []
-localize = []
-cli = []
-nightly = []
-par_open = ["rayon"]
-manual = []
 
 [profile.release]
 opt-level = 'z'   # Optimize for size.
@@ -139,11 +146,6 @@ doc = false
 name = "asciii"
 required-features = ["cli"]
 
-[[bin]]
-test = false
-doc = false
-name = "asciii-web"
-required-features = ["server"]
 
 [build-dependencies]
 chrono = "0.4"

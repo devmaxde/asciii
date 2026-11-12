@@ -9,6 +9,8 @@ use std::env;
 use crowbook_intl_runtime::set_lang;
 
 pub mod cli;
+#[cfg(feature = "tui")]
+pub mod tui;
 
 fn setup_locale() {
     if let Ok(env_lang) = env::var("LANG") {
@@ -20,6 +22,9 @@ fn setup_locale() {
 
 fn main() {
     color_backtrace::install();
+    #[cfg(feature = "tui")]
+    tui::logger::init();
+    #[cfg(not(feature = "tui"))]
     asciii::util::setup_log();
     setup_locale();
 

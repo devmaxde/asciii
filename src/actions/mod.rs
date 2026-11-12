@@ -99,33 +99,36 @@ pub fn projects_to_csv(projects: &[Project]) -> Result<String, Error> {
     Ok(string)
 }
 
+/// Invoiced but not yet payed by the client.
 fn open_payments(projects: &[Project]) -> Currency {
     projects
         .iter()
-        .filter(|&p| !p.canceled() && !p.is_payed() && p.age().unwrap_or(0) > 0)
+        .filter(|&p| !p.canceled() && p.invoice().date().is_ok() && !p.is_payed())
         .filter_map(|p| p.sum_sold().ok())
-        .fold(Currency::default(), |acc, x| acc + x)
+        .fold(Currency::default(), crate::stats::plus)
 }
 
+/// Wages of past events that have not been payed out yet.
 fn open_wages(projects: &[Project]) -> Currency {
     projects
         .iter()
-        .filter(|p| !p.canceled() && p.age().unwrap_or(0) > 0)
+        .filter(|p| !p.canceled() && p.age().unwrap_or(0) > 0 && !p.hours().employees_payed())
         .filter_map(|p| p.hours().net_wages())
-        .fold(Currency::default(), |acc, x| acc + x)
+        .fold(Currency::default(), crate::stats::plus)
 }
 
+/// Open wage (hours × salary) per employee, over past events whose wages have not been payed yet.
 fn unpayed_employees(projects: &[Project]) -> HashMap<String, Currency> {
     let mut buckets = HashMap::new();
     let employees = projects
         .iter()
-        .filter(|p| !p.canceled() && p.age().unwrap_or(0) > 0)
+        .filter(|p| !p.canceled() && p.age().unwrap_or(0) > 0 && !p.hours().employees_payed())
         .filter_map(|p| p.hours().employees().ok())
         .flat_map(IntoIterator::into_iter);
 
     for employee in employees {
         let bucket = buckets.entry(employee.name.clone()).or_insert_with(Currency::new);
-        *bucket = *bucket + employee.salary;
+        *bucket = crate::stats::plus(*bucket, employee.wage);
     }
     buckets
 }

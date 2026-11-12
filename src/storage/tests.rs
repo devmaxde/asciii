@@ -29,7 +29,7 @@ impl Storable for TestProject {
         Self: Sized,
     {
         // generates a temp file
-        let temp_dir = TempDir::new_in("./target/debug/build/", project_name).unwrap();
+        let temp_dir = TempDir::new_in(".", project_name).unwrap();
         let temp_file = temp_dir.path().join(project_name);
 
         // just copy over template

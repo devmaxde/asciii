@@ -75,10 +75,7 @@ pub trait YamlProvider {
             "paths shouldn't contain whitespaces {:?}",
             path
         );
-        let path = path
-            .split(|p| p == '/' || p == '.')
-            .filter(|k| !k.is_empty())
-            .collect::<Vec<&str>>();
+        let path = path.split(['/', '.']).filter(|k| !k.is_empty()).collect::<Vec<&str>>();
         match self.get_path(data, &path) {
             Some(&Yaml::BadValue) | Some(&Yaml::Null) => None,
             content => content,

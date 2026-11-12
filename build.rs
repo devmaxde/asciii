@@ -52,19 +52,6 @@ fn generate_localization() {
     localizer.write_macro_file(dest_path).unwrap();
 }
 
-fn build_webapp() {
-    Command::new("yarn")
-        .current_dir("./webapp")
-        .output()
-        .unwrap_or_else(|e| panic!("yarn install step failed {e}"));
-
-    Command::new("yarn")
-        .current_dir("./webapp")
-        .arg("build")
-        .output()
-        .unwrap_or_else(|e| panic!("yarn build step failed {e}"));
-}
-
 fn main() {
     // passing variables to rustc
     println!(
@@ -73,9 +60,6 @@ fn main() {
     );
     println!("cargo:rustc-env=BUILD_DATE={}", Utc::now().format("%+"));
 
-    if env::var("CARGO_FEATURE_WEBAPP") == Ok(String::from("1")) {
-        build_webapp();
-    }
     if env::var("CARGO_FEATURE_LOCALIZE") == Ok(String::from("1")) {
         generate_localization();
     }

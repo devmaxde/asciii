@@ -752,3 +752,2846 @@ msgstr ""
 
 #~ msgid "really?"
 #~ msgstr "wirklich?"
+
+msgid "Interactive terminal interface with dashboard"
+msgstr "Interaktive Terminal-Oberfläche mit Übersicht"
+
+msgid "asciii asciii? {face}"
+msgstr "asciii asciii? {face}"
+
+msgid "{face} that's not a command"
+msgstr "{face} das ist kein Befehl"
+
+msgid "what do you think this is, a shell? {face}"
+msgstr "Was denkst du, ist das hier eine Shell? {face}"
+
+msgid "working directory"
+msgstr "Arbeitsverzeichnis"
+
+msgid "all of {}"
+msgstr "alles aus {}"
+
+msgid "archive {}"
+msgstr "Archiv {}"
+
+msgid "everything"
+msgstr "alles"
+
+msgid "broken projects"
+msgstr "kaputte Projekte"
+
+msgid "bill number"
+msgstr "Rechnungsnummer"
+
+msgid "date"
+msgstr "Datum"
+
+msgid "name"
+msgstr "Name"
+
+msgid "manager"
+msgstr "Verantwortlicher"
+
+msgid "loading crashed, see log"
+msgstr "Laden abgestürzt, siehe Log"
+
+msgid "{} has no open placeholders"
+msgstr "{} hat keine offenen Platzhalter"
+
+msgid "Fill in a field of {}"
+msgstr "Feld von {} ausfüllen"
+
+msgid "Assign invoice number {} to {}?"
+msgstr "Rechnungsnummer {} an {} vergeben?"
+
+msgid "Create a document for {}"
+msgstr "Dokument für {} erstellen"
+
+msgid "Offer"
+msgstr "Angebot"
+
+msgid "Invoice"
+msgstr "Rechnung"
+
+msgid "Offer, rebuild even if unchanged"
+msgstr "Angebot, auch ohne Änderung neu bauen"
+
+msgid "Invoice, rebuild even if unchanged"
+msgstr "Rechnung, auch ohne Änderung neu bauen"
+
+msgid "{} is already archived"
+msgstr "{} ist bereits archiviert"
+
+msgid "{} is ready to be archived."
+msgstr "{} kann archiviert werden."
+
+msgid "{} is NOT ready to be archived, missing: {}. Archiving anyway is possible."
+msgstr "{} ist NICHT bereit fürs Archiv, es fehlt: {}. Archivieren ist trotzdem möglich."
+
+msgid "Year"
+msgstr "Jahr"
+
+msgid "archive folder"
+msgstr "Archivordner"
+
+msgid "{} is not archived"
+msgstr "{} ist nicht archiviert"
+
+msgid "Move {} back to the working directory?"
+msgstr "{} zurück ins Arbeitsverzeichnis verschieben?"
+
+msgid "Delete {} and its folder {}? Type the project name to confirm."
+msgstr "{} und den Ordner {} löschen? Zum Bestätigen den Projektnamen eingeben."
+
+msgid "New project"
+msgstr "Neues Projekt"
+
+msgid "required"
+msgstr "Pflichtfeld"
+
+msgid "Name"
+msgstr "Name"
+
+msgid "Template"
+msgstr "Vorlage"
+
+msgid "DD.MM.YYYY, empty = in two weeks"
+msgstr "TT.MM.JJJJ, leer = in zwei Wochen"
+
+msgid "Start time"
+msgstr "Beginn"
+
+msgid "HH:MM, optional"
+msgstr "HH:MM, optional"
+
+msgid "End time"
+msgstr "Ende"
+
+msgid "Manager"
+msgstr "Verantwortlicher"
+
+msgid "Description"
+msgstr "Beschreibung"
+
+msgid "optional"
+msgstr "optional"
+
+msgid "Open in editor"
+msgstr "Im Editor öffnen"
+
+msgid "yes"
+msgstr "ja"
+
+msgid "yes / no"
+msgstr "ja / nein"
+
+msgid "git"
+msgstr "git"
+
+msgid "the name does not match, nothing deleted"
+msgstr "der Name stimmt nicht, nichts gelöscht"
+
+msgid "Fill in {}"
+msgstr "{} ausfüllen"
+
+msgid "value as it should appear in the file"
+msgstr "Wert, wie er in der Datei stehen soll"
+
+msgid "Run git {}?"
+msgstr "git {} ausführen?"
+
+msgid "please enter a value"
+msgstr "bitte einen Wert eingeben"
+
+msgid "please enter a year like 2026"
+msgstr "bitte ein Jahr wie 2026 eingeben"
+
+msgid "the name is required"
+msgstr "der Name ist Pflicht"
+
+msgid "the date must look like 24.12.2026"
+msgstr "das Datum muss wie 24.12.2026 aussehen"
+
+msgid "unknown template, available: {}"
+msgstr "unbekannte Vorlage, verfügbar: {}"
+
+msgid "git is not available, continuing without: {}"
+msgstr "git ist nicht verfügbar, weiter ohne: {}"
+
+msgid "status: show changed files"
+msgstr "status: geänderte Dateien zeigen"
+
+msgid "diff: show changes"
+msgstr "diff: Änderungen zeigen"
+
+msgid "log: show history"
+msgstr "log: Verlauf zeigen"
+
+msgid "add: stage all changes"
+msgstr "add: alle Änderungen vormerken"
+
+msgid "commit: save staged changes"
+msgstr "commit: vorgemerkte Änderungen speichern"
+
+msgid "pull: get changes from remote"
+msgstr "pull: Änderungen vom Server holen"
+
+msgid "push: upload changes to remote"
+msgstr "push: Änderungen zum Server hochladen"
+
+msgid "Press Enter to return to asciii."
+msgstr "Enter drücken, um zu asciii zurückzukehren."
+
+msgid "failed to run git: {}"
+msgstr "git konnte nicht ausgeführt werden: {}"
+
+msgid "(no output)"
+msgstr "(keine Ausgabe)"
+
+msgid "edited {}"
+msgstr "{} bearbeitet"
+
+msgid "{} is not an open field of {}"
+msgstr "{} ist kein offenes Feld von {}"
+
+msgid "{} set to {:?}"
+msgstr "{} auf {:?} gesetzt"
+
+msgid "Invoice number already set in {}"
+msgstr "Rechnungsnummer in {} ist bereits gesetzt"
+
+msgid "invoice number {} assigned"
+msgstr "Rechnungsnummer {} vergeben"
+
+msgid "document export finished, output folder: {}"
+msgstr "Dokumentexport fertig, Ausgabeordner: {}"
+
+msgid "document export is not part of this build"
+msgstr "Dokumentexport ist in diesem Build nicht enthalten"
+
+msgid "archived {} to {}"
+msgstr "{} nach {} archiviert"
+
+msgid "moved back to {}"
+msgstr "zurück nach {} verschoben"
+
+msgid "deleted {}"
+msgstr "{} gelöscht"
+
+msgid "created {}"
+msgstr "{} angelegt"
+
+msgid "written {}"
+msgstr "{} geschrieben"
+
+msgid "the storage is not a git repository"
+msgstr "der Projektspeicher ist kein git-Repository"
+
+msgid "git status"
+msgstr "git status"
+
+msgid "git log"
+msgstr "git log"
+
+msgid "git add --all"
+msgstr "git add --all"
+
+msgid "git commit finished: {}"
+msgstr "git commit beendet: {}"
+
+msgid "git pull finished: {}"
+msgstr "git pull beendet: {}"
+
+msgid "git push finished: {}"
+msgstr "git push beendet: {}"
+
+msgid "loading projects …"
+msgstr "lade Projekte …"
+
+msgid "could not load projects: {}"
+msgstr "Projekte konnten nicht geladen werden: {}"
+
+msgid "Log ({})"
+msgstr "Log ({})"
+
+msgid "Log"
+msgstr "Log"
+
+msgid "Dashboard"
+msgstr "Übersicht"
+
+msgid "Projects"
+msgstr "Projekte"
+
+msgid "git: {} changed"
+msgstr "git: {} geändert"
+
+msgid "no git"
+msgstr "kein git"
+
+msgid "loading …"
+msgstr "lade …"
+
+msgid "enter: keep · esc: clear"
+msgstr "Enter: behalten · Esc: leeren"
+
+msgid "q quit · tab switch · ←/→ year · ↑/↓ to-do · enter open · n new · g git · r reload · ? help"
+msgstr "q Ende · Tab wechseln · ←/→ Jahr · ↑/↓ Aufgaben · Enter öffnen · n neu · g git · r neu laden · ? Hilfe"
+
+msgid "q quit · enter open · n new · / search · w scope · s sort · ←/→ year · e edit · m make PDF · a archive · ? help"
+msgstr "q Ende · Enter öffnen · n neu · / suchen · w Auswahl · s sortieren · ←/→ Jahr · e bearbeiten · m PDF erstellen · a archivieren · ? Hilfe"
+
+msgid "esc back · o offer · i invoice · e edit · p fill field · I invoice no. · m make PDF · a archive · ? help"
+msgstr "Esc zurück · o Angebot · i Rechnung · e bearbeiten · p Feld ausfüllen · I Rechnungsnr. · m PDF erstellen · a archivieren · ? Hilfe"
+
+msgid "q quit · ↑/↓ scroll · end newest · tab switch · ? help"
+msgstr "q Ende · ↑/↓ blättern · Ende neueste · Tab wechseln · ? Hilfe"
+
+msgid "{} excl. VAT · {} projects"
+msgstr "{} netto · {} Projekte"
+
+msgid "Revenue invoiced"
+msgstr "Umsatz abgerechnet"
+
+msgid "Revenue open (not invoiced)"
+msgstr "Umsatz offen (nicht abgerechnet)"
+
+msgid "Expected total"
+msgstr "Erwartet gesamt"
+
+msgid "{} excl. VAT"
+msgstr "{} netto"
+
+msgid "Received"
+msgstr "Eingegangen"
+
+msgid "{} paid invoices"
+msgstr "{} bezahlte Rechnungen"
+
+msgid "{} unpaid, {} overdue"
+msgstr "{} unbezahlt, {} überfällig"
+
+msgid "{} unpaid"
+msgstr "{} unbezahlt"
+
+msgid "Open bills"
+msgstr "Offene Rechnungen"
+
+msgid "To invoice"
+msgstr "Abzurechnen"
+
+msgid "{} events"
+msgstr "{} Veranstaltungen"
+
+msgid "{} incl. VAT"
+msgstr "{} brutto"
+
+msgid "Wages"
+msgstr "Löhne"
+
+msgid "{} open"
+msgstr "{} offen"
+
+msgid "{} paid · {:.1} h service"
+msgstr "{} bezahlt · {:.1} h Service"
+
+msgid "Jan"
+msgstr "Jan"
+
+msgid "Feb"
+msgstr "Feb"
+
+msgid "Mar"
+msgstr "Mär"
+
+msgid "Apr"
+msgstr "Apr"
+
+msgid "May"
+msgstr "Mai"
+
+msgid "Jun"
+msgstr "Jun"
+
+msgid "Jul"
+msgstr "Jul"
+
+msgid "Aug"
+msgstr "Aug"
+
+msgid "Sep"
+msgstr "Sep"
+
+msgid "Oct"
+msgstr "Okt"
+
+msgid "Nov"
+msgstr "Nov"
+
+msgid "Dec"
+msgstr "Dez"
+
+msgid "Invoiced per month {} (by event date, incl. VAT, €)"
+msgstr "Abgerechnet pro Monat {} (nach Veranstaltungsdatum, brutto, €)"
+
+msgid "{} staff"
+msgstr "{} Personal"
+
+msgid "Next 30 days"
+msgstr "Nächste 30 Tage"
+
+msgid "no events in the next 30 days"
+msgstr "keine Veranstaltungen in den nächsten 30 Tagen"
+
+msgid "write invoice"
+msgstr "Rechnung schreiben"
+
+msgid "payment {} days open"
+msgstr "Zahlung seit {} Tagen offen"
+
+msgid "pay employees"
+msgstr "Personal bezahlen"
+
+msgid "archive"
+msgstr "archivieren"
+
+msgid "To-do ({})"
+msgstr "Aufgaben ({})"
+
+msgid "nothing to do"
+msgstr "nichts zu tun"
+
+msgid "Open wages per employee"
+msgstr "Offene Löhne pro Person"
+
+msgid "all wages paid"
+msgstr "alle Löhne bezahlt"
+
+msgid "Projects · {} · {} shown · sorted by {}"
+msgstr "Projekte · {} · {} angezeigt · sortiert nach {}"
+
+msgid " · search: {}"
+msgstr " · Suche: {}"
+
+msgid "working"
+msgstr "in Arbeit"
+
+msgid "Folder"
+msgstr "Ordner"
+
+msgid "Problem"
+msgstr "Problem"
+
+msgid "Where"
+msgstr "Wo"
+
+msgid "CANCELED: {}"
+msgstr "ABGESAGT: {}"
+
+msgid "No."
+msgstr "Nr."
+
+msgid "O"
+msgstr "A"
+
+msgid "I"
+msgstr "R"
+
+msgid "A"
+msgstr "A"
+
+msgid "no projects here, press w to change the scope"
+msgstr "keine Projekte hier, mit w die Auswahl ändern"
+
+msgid "missing: {}"
+msgstr "fehlt: {}"
+
+msgid "CANCELED"
+msgstr "ABGESAGT"
+
+msgid "Event"
+msgstr "Veranstaltung"
+
+msgid "Location"
+msgstr "Ort"
+
+msgid "Client"
+msgstr "Kunde"
+
+msgid "Email"
+msgstr "E-Mail"
+
+msgid "Address"
+msgstr "Adresse"
+
+msgid "Salutation"
+msgstr "Anrede"
+
+msgid "Offer and invoice"
+msgstr "Angebot und Rechnung"
+
+msgid "Paid on"
+msgstr "Bezahlt am"
+
+msgid "not yet"
+msgstr "noch nicht"
+
+msgid "Bill: {}   (o offer · i invoice)"
+msgstr "Positionen: {}   (o Angebot · i Rechnung)"
+
+msgid "sum at {}% VAT"
+msgstr "Summe bei {}% MwSt."
+
+msgid "+ {}% VAT"
+msgstr "+ {}% MwSt."
+
+msgid "Total"
+msgstr "Gesamt"
+
+msgid "  cannot compute the bill: {}"
+msgstr "  Rechnung kann nicht berechnet werden: {}"
+
+msgid "Staff"
+msgstr "Personal"
+
+msgid "Wages paid"
+msgstr "Löhne bezahlt"
+
+msgid "  no staff"
+msgstr "  kein Personal"
+
+msgid "Status"
+msgstr "Status"
+
+msgid "ready for the offer"
+msgstr "bereit für das Angebot"
+
+msgid "ready for the invoice"
+msgstr "bereit für die Rechnung"
+
+msgid "ready for the archive"
+msgstr "bereit für das Archiv"
+
+msgid "open placeholders (p): {}"
+msgstr "offene Platzhalter (p): {}"
+
+msgid "Files"
+msgstr "Dateien"
+
+msgid "Project"
+msgstr "Projekt"
+
+msgid "Invoice PDF"
+msgstr "Rechnungs-PDF"
+
+msgid "Offer PDF"
+msgstr "Angebots-PDF"
+
+msgid "In folder"
+msgstr "Im Ordner"
+
+msgid "Everywhere"
+msgstr "Überall"
+
+msgid "switch between dashboard, projects and log"
+msgstr "zwischen Übersicht, Projekten und Log wechseln"
+
+msgid "previous / next year"
+msgstr "vorheriges / nächstes Jahr"
+
+msgid "reload all projects from disk"
+msgstr "alle Projekte neu von der Platte laden"
+
+msgid "new project"
+msgstr "neues Projekt"
+
+msgid "git: status, diff, log, add, commit, pull, push"
+msgstr "git: status, diff, log, add, commit, pull, push"
+
+msgid "export the year as CSV into the output folder"
+msgstr "das Jahr als CSV in den Ausgabeordner exportieren"
+
+msgid "export the year as calendar (.ics) into the output folder"
+msgstr "das Jahr als Kalender (.ics) in den Ausgabeordner exportieren"
+
+msgid "help / quit"
+msgstr "Hilfe / Ende"
+
+msgid "Projects list"
+msgstr "Projektliste"
+
+msgid "move"
+msgstr "bewegen"
+
+msgid "open details"
+msgstr "Details öffnen"
+
+msgid "search by name, invoice number or manager"
+msgstr "nach Name, Rechnungsnummer oder Verantwortlichem suchen"
+
+msgid "scope: working, year, archive, all, broken"
+msgstr "Auswahl: in Arbeit, Jahr, Archiv, alles, kaputt"
+
+msgid "sort: index, date, name, manager"
+msgstr "sortieren: Index, Datum, Name, Verantwortlicher"
+
+msgid "Actions on the selected project"
+msgstr "Aktionen für das gewählte Projekt"
+
+msgid "edit the project file in your editor"
+msgstr "Projektdatei im Editor bearbeiten"
+
+msgid "fill in an open placeholder"
+msgstr "einen offenen Platzhalter ausfüllen"
+
+msgid "assign the next invoice number"
+msgstr "nächste Rechnungsnummer vergeben"
+
+msgid "create offer or invoice document (pdflatex)"
+msgstr "Angebot oder Rechnung erstellen (pdflatex)"
+
+msgid "archive / move back from the archive"
+msgstr "archivieren / aus dem Archiv zurückholen"
+
+msgid "delete the project"
+msgstr "Projekt löschen"
+
+msgid "detail view: show offer or invoice bill"
+msgstr "Detailansicht: Angebots- oder Rechnungspositionen zeigen"
+
+msgid "Colours"
+msgstr "Farben"
+
+msgid "today"
+msgstr "heute"
+
+msgid "this week"
+msgstr "diese Woche"
+
+msgid "next week"
+msgstr "nächste Woche"
+
+msgid "later"
+msgstr "später"
+
+msgid "past 4 weeks"
+msgstr "letzte 4 Wochen"
+
+msgid "older"
+msgstr "älter"
+
+msgid "O I € A: offer ready, invoice ready, paid (client / staff), archivable"
+msgstr "A R € A: Angebot fertig, Rechnung fertig, bezahlt (Kunde / Personal), archivierbar"
+
+msgid "bold ✓ = the PDF exists"
+msgstr "fettes ✓ = PDF existiert"
+
+msgid "Help"
+msgstr "Hilfe"
+
+msgid "y / enter: yes   n / esc: no"
+msgstr "y / Enter: ja   n / Esc: nein"
+
+msgid "Confirm"
+msgstr "Bestätigen"
+
+msgid "enter: delete   esc: cancel"
+msgstr "Enter: löschen   Esc: abbrechen"
+
+msgid "Delete"
+msgstr "Löschen"
+
+msgid " ↑/↓ scroll · esc close "
+msgstr " ↑/↓ blättern · Esc schließen"
+
+msgid " enter choose · esc cancel "
+msgstr " Enter wählen · Esc abbrechen"
+
+msgid "tab/↓ next field · ↑ previous · enter save · esc cancel"
+msgstr "Tab/↓ nächstes Feld · ↑ vorheriges · Enter speichern · Esc abbrechen"
+
+msgid "the project file is not valid YAML, see the log"
+msgstr "die Projektdatei ist kein gültiges YAML, siehe Log"
+
+msgid "{} is up to date, nothing rebuilt (choose \"rebuild\" to force it)"
+msgstr "{} ist aktuell, nichts neu gebaut (\"neu bauen\" wählen, um es zu erzwingen)"
+
+msgid "no PDF was created, see the log and the {} output"
+msgstr "es wurde keine PDF erstellt, siehe Log und die Ausgabe von {}"
+
+msgid "could not detach the keyboard: {}"
+msgstr "Tastatur konnte nicht abgekoppelt werden: {}"
+
+msgid "could not return to the terminal interface: {}"
+msgstr "Rückkehr zur Terminal-Oberfläche nicht möglich: {}"
+
+msgid "esc back · e edit · p fill field · I invoice no. · m make PDF · a archive · ? help"
+msgstr "Esc zurück · e bearbeiten · p Feld ausfüllen · I Rechnungsnr. · m PDF erstellen · a archivieren · ? Hilfe"
+
+msgid "Bill"
+msgstr "Positionen"
+
+msgid "Item"
+msgstr "Artikel"
+
+msgid "Price"
+msgstr "Preis"
+
+msgid "Offered"
+msgstr "Angeboten"
+
+msgid "Sold"
+msgstr "Verkauft"
+
+msgid "{} is up to date. Create it again anyway?"
+msgstr "{} ist aktuell. Trotzdem neu erstellen?"
+
+msgid "{} is up to date, nothing rebuilt"
+msgstr "{} ist aktuell, nichts neu erstellt"
+
+msgid "Offer number {} is also used by \"{}\""
+msgstr "Angebotsnummer {} wird auch von \"{}\" verwendet"
+
+msgid "Invoice number {} is also used by \"{}\""
+msgstr "Rechnungsnummer {} wird auch von \"{}\" verwendet"
+
+msgid "This invoice shares numbers with other working projects:"
+msgstr "Diese Rechnung hat Nummern, die andere laufende Projekte auch verwenden:"
+
+msgid "back"
+msgstr "zurück"
+
+msgid "ignore and create the invoice"
+msgstr "ignorieren und Rechnung erstellen"
+
+msgid "Duplicate number"
+msgstr "Doppelte Nummer"
+
+msgid "all years"
+msgstr "alle Jahre"
+
+msgid "q quit · enter open · n new · / search · w scope · a archived · s sort · ←/→ year · e edit · m make PDF · A archive · ? help"
+msgstr "q Ende · Enter öffnen · n neu · / suchen · w Auswahl · a Archiv · s sortieren · ←/→ Jahr · e bearbeiten · m PDF erstellen · A archivieren · ? Hilfe"
+
+msgid "esc back · e edit · p fill field · I invoice no. · m make PDF · A archive · ? help"
+msgstr "Esc zurück · e bearbeiten · p Feld ausfüllen · I Rechnungsnr. · m PDF erstellen · A archivieren · ? Hilfe"
+
+msgid "with archive"
+msgstr "mit Archiv"
+
+msgid "without archive"
+msgstr "ohne Archiv"
+
+msgid "Projects · {} · {} · {} shown · sorted by {} {}"
+msgstr "Projekte · {} · {} · {} angezeigt · sortiert nach {} {}"
+
+msgid "scope: selected year, all years, broken projects"
+msgstr "Auswahl: gewähltes Jahr, alle Jahre, kaputte Projekte"
+
+msgid "show or hide archived projects"
+msgstr "archivierte Projekte ein- oder ausblenden"
+
+msgid "sort: ascending, descending, then the next column"
+msgstr "sortieren: aufsteigend, absteigend, dann die nächste Spalte"
+
+msgid "archived (▪ in column A)"
+msgstr "archiviert (▪ in der letzten Spalte A)"
+
+msgid "q quit · enter open · n new · / search · w scope · a archived · s sort · ←/→ year · e edit · m make PDF · ? help"
+msgstr "q Ende · Enter öffnen · n neu · / suchen · w Auswahl · a Archiv · s sortieren · ←/→ Jahr · e bearbeiten · m PDF erstellen · ? Hilfe"
+
+msgid "esc back · e edit · p fill field · I invoice no. · m make PDF · a archive · u move back · ? help"
+msgstr "Esc zurück · e bearbeiten · p Feld ausfüllen · I Rechnungsnr. · m PDF erstellen · a archivieren · u zurückholen · ? Hilfe"
+
+msgid "on the project page: archive / move back from the archive"
+msgstr "auf der Projektseite: archivieren / aus dem Archiv zurückholen"
+
+msgid "q quit · enter open · n new · / search · w scope · a archived · s sort · ←/→ year · ? help"
+msgstr "q Ende · Enter öffnen · n neu · / suchen · w Auswahl · a Archiv · s sortieren · ←/→ Jahr · ? Hilfe"
+
+msgid "Only on the project page (enter)"
+msgstr "Nur auf der Projektseite (Enter)"
+
+msgid "Assign invoice number {} ({}) to {}?"
+msgstr "Rechnungsnummer {} ({}) an {} vergeben?"
+
+msgid "Move back from the archive"
+msgstr "Aus dem Archiv zurückholen"
+
+msgid "{} is archived in {}."
+msgstr "{} ist im Archiv {}."
+
+msgid "Moving it back puts it into the working directory again: it counts as a running project, shows up in the to-dos and can be changed."
+msgstr "Zurückholen verschiebt es wieder ins Arbeitsverzeichnis: es zählt als laufendes Projekt, erscheint in den Aufgaben und kann geändert werden."
+
+msgid "move back to the working directory"
+msgstr "ins Arbeitsverzeichnis zurückholen"
+
+msgid "the invoice number must be a whole number like 42"
+msgstr "die Rechnungsnummer muss eine ganze Zahl wie 42 sein"
+
+msgid "invoice number {} is already used in {} by \"{}\", the next free one is {}"
+msgstr "Rechnungsnummer {} ist {} schon an \"{}\" vergeben, die nächste freie ist {}"
+
+msgid "{} (archive {})"
+msgstr "{} (Archiv {})"
+
+msgid "esc back · e edit · p fill field · I invoice no. · m make PDF · a archive / move back · ? help"
+msgstr "Esc zurück · e bearbeiten · p Feld ausfüllen · I Rechnungsnr. · m PDF erstellen · a archivieren / zurückholen · ? Hilfe"
+
+msgid "⚠ duplicate invoice no."
+msgstr "⚠ doppelte Rechnungsnr."
+
+msgid "⚠ This invoice number is also used by {}. Invoice numbers must be unique per year."
+msgstr "⚠ Diese Rechnungsnummer hat auch {}. Rechnungsnummern müssen pro Jahr eindeutig sein."
+
+msgid "archive, or move an archived project back (with a warning)"
+msgstr "archivieren, oder ein archiviertes Projekt zurückholen (mit Warnung)"
+
+msgid "cancel"
+msgstr "abbrechen"
+
+msgid "{} is a git repository, checking the remote …"
+msgstr "{} ist ein git-Repository, prüfe den Server …"
+
+msgid "{} is not a git repository: no history, no backup, no sharing. Set it up with `git init` or `asciii clone`."
+msgstr "{} ist kein git-Repository: kein Verlauf, keine Sicherung, kein Teilen. Einrichten mit `git init` oder `asciii clone`."
+
+msgid "Startup checks"
+msgstr "Prüfungen beim Start"
+
+msgid "git remote: {} new, {} not pushed"
+msgstr "git-Server: {} neu, {} nicht hochgeladen"
+
+msgid "New changes on the remote"
+msgstr "Neue Änderungen auf dem Server"
+
+msgid "The remote has {} commit(s) you do not have yet."
+msgstr "Auf dem Server gibt es {} Commit(s), die du noch nicht hast."
+
+msgid "Pull them before changing projects, otherwise you may run into conflicts."
+msgstr "Hol sie vor dem Ändern von Projekten, sonst kann es Konflikte geben."
+
+msgid "git pull now"
+msgstr "jetzt git pull"
+
+msgid "{} local commit(s) not pushed yet (g → push)"
+msgstr "{} lokale Commit(s) noch nicht hochgeladen (g → push)"
+
+msgid "the git branch has no upstream, nothing to compare with"
+msgstr "der git-Branch hat keinen Upstream, nichts zum Vergleichen"
+
+msgid "git fetch failed: {}"
+msgstr "git fetch fehlgeschlagen: {}"
+
+msgid "needed for the git menu and the change markers"
+msgstr "nötig für das git-Menü und die Änderungsmarker"
+
+msgid "needed to create PDFs (document_export/convert_tool)"
+msgstr "nötig, um PDFs zu erstellen (document_export/convert_tool)"
+
+msgid "editor for e (user/editor, $VISUAL or $EDITOR)"
+msgstr "Editor für e (user/editor, $VISUAL oder $EDITOR)"
+
+msgid "{} found at {}"
+msgstr "{} gefunden: {}"
+
+msgid "{} not found, {}"
+msgstr "{} nicht gefunden, {}"
+
+msgid "close"
+msgstr "schließen"
+
+msgid "{} has none of the fields p can fill in, use e"
+msgstr "{} hat keines der Felder, die p ausfüllen kann, benutze e"
+
+msgid "(empty)"
+msgstr "(leer)"
+
+msgid "a whole number like 42"
+msgstr "eine ganze Zahl wie 42"
+
+msgid "a date like 24.12.2026"
+msgstr "ein Datum wie 24.12.2026"
+
+msgid "the value, quoting is done for you"
+msgstr "der Wert, Anführungszeichen werden automatisch gesetzt"
+
+msgid "please enter a date like 24.12.2026"
+msgstr "bitte ein Datum wie 24.12.2026 eingeben"
+
+msgid "empty fields (p): {}"
+msgstr "leere Felder (p): {}"
+
+msgid "placeholders inside values, they would be printed as they are (e): {}"
+msgstr "Platzhalter in Werten, sie würden so gedruckt werden (e): {}"
+
+msgid "fill in a field (invoice number, dates, client, …)"
+msgstr "Feld ausfüllen (Rechnungsnummer, Daten, Kunde, …)"
+
+msgid "{} is not in the project file, add it with the editor (e)"
+msgstr "{} fehlt in der Projektdatei, mit dem Editor ergänzen (e)"
+
+msgid "{} is a text block, change it with the editor (e)"
+msgstr "{} ist ein Textblock, mit dem Editor ändern (e)"
+
+msgid "setting {} would break the project file, nothing changed"
+msgstr "{} zu setzen würde die Projektdatei kaputt machen, nichts geändert"
+
+msgid "{} could not be set safely, change it with the editor (e)"
+msgstr "{} konnte nicht sicher gesetzt werden, mit dem Editor ändern (e)"
+
+msgid "template not changed"
+msgstr "Vorlage nicht geändert"
+
+msgid "archived projects are not changed, move it back first (a)"
+msgstr "archivierte Projekte werden nicht geändert, erst zurückholen (a)"
+
+msgid "unsaved changes: s saves, esc again throws them away"
+msgstr "ungespeicherte Änderungen: s speichert, nochmal esc verwirft sie"
+
+msgid "offer not changed"
+msgstr "Angebot nicht geändert"
+
+msgid "{} removed (esc throws away all changes)"
+msgstr "{} entfernt (esc verwirft alle Änderungen)"
+
+msgid "every catalog product is in the offer already, n adds a new one"
+msgstr "alle Katalogprodukte sind schon im Angebot, n legt ein neues an"
+
+msgid "Add a product"
+msgstr "Produkt hinzufügen"
+
+msgid "Name, unit and price are part of the catalog of this project."
+msgstr "Name, Einheit und Preis gehören zum Katalog dieses Projekts."
+
+msgid "Change product"
+msgstr "Produkt ändern"
+
+msgid "New product"
+msgstr "Neues Produkt"
+
+msgid "e.g. 1l, stk, 400g; optional"
+msgstr "z.B. 1l, stk, 400g; optional"
+
+msgid "Unit"
+msgstr "Einheit"
+
+msgid "per unit, before tax, e.g. 2,50"
+msgstr "pro Einheit, netto, z.B. 2,50"
+
+msgid "offered"
+msgstr "angeboten"
+
+msgid "please enter a price like 2,50"
+msgstr "bitte einen Preis wie 2,50 eingeben"
+
+msgid "please enter an amount like 4"
+msgstr "bitte eine Menge wie 4 eingeben"
+
+msgid "more was returned than that, the amount must be at least {}"
+msgstr "es wurde mehr zurückgegeben, die Menge muss mindestens {} sein"
+
+msgid "nothing changed"
+msgstr "nichts geändert"
+
+msgid "catalog entry {} has no valid price, fix it with the editor (e)"
+msgstr "Katalogeintrag {} hat keinen gültigen Preis, mit dem Editor korrigieren (e)"
+
+msgid "the project file has no products section, add one with the editor (e)"
+msgstr "die Projektdatei hat keinen products-Abschnitt, mit dem Editor ergänzen (e)"
+
+msgid "the products section is not valid YAML: {}"
+msgstr "der products-Abschnitt ist kein gültiges YAML: {}"
+
+msgid "a product has an unexpected name, fix it with the editor (e)"
+msgstr "ein Produkt hat einen unerwarteten Namen, mit dem Editor korrigieren (e)"
+
+msgid "product *{} is not in the catalog, fix it with the editor (e)"
+msgstr "Produkt *{} ist nicht im Katalog, mit dem Editor korrigieren (e)"
+
+msgid "the template catalog could not be written safely, nothing changed"
+msgstr "der Vorlagenkatalog konnte nicht sicher geschrieben werden, nichts geändert"
+
+msgid "the offer would break the project file, nothing saved: {}"
+msgstr "das Angebot würde die Projektdatei kaputt machen, nichts gespeichert: {}"
+
+msgid "the offer could not be written safely, nothing saved"
+msgstr "das Angebot konnte nicht sicher geschrieben werden, nichts gespeichert"
+
+msgid "the offer would read back differently ({} items, {}), nothing saved"
+msgstr "das Angebot würde anders zurückgelesen ({} Posten, {}), nichts gespeichert"
+
+msgid "new: {}"
+msgstr "neu: {}"
+
+msgid "unit {} → {}"
+msgstr "Einheit {} → {}"
+
+msgid "tax {} → {}"
+msgstr "Steuer {} → {}"
+
+msgid "{} was changed by someone else while editing the offer, nothing saved"
+msgstr "{} wurde während der Angebotsbearbeitung woanders geändert, nichts gespeichert"
+
+msgid "offer saved in {}"
+msgstr "Angebot gespeichert in {}"
+
+msgid "{} catalog entries written to the template {}"
+msgstr "{} Katalogeinträge in die Vorlage {} geschrieben"
+
+msgid "esc back · o offer · e edit · p fill field · I invoice no. · m make PDF · a archive / move back · ? help"
+msgstr "esc zurück · o Angebot · e bearbeiten · p Feld ausfüllen · I Rechnungsnr. · m PDF erstellen · a archivieren / zurückholen · ? Hilfe"
+
+msgid "esc back · +/- amount · enter change · a add from catalog · n new product · d remove · s save"
+msgstr "esc zurück · +/- Menge · enter ändern · a aus Katalog · n neues Produkt · d entfernen · s speichern"
+
+msgid "offer editor: add, remove and change products without the editor"
+msgstr "Angebot bearbeiten: Produkte hinzufügen, entfernen und ändern ohne Editor"
+
+msgid "Offer editor (o)"
+msgstr "Angebot bearbeiten (o)"
+
+msgid "more / less of the selected product"
+msgstr "mehr / weniger vom gewählten Produkt"
+
+msgid "change name, unit, price and amount"
+msgstr "Name, Einheit, Preis und Menge ändern"
+
+msgid "add from the catalog, new product, remove"
+msgstr "aus dem Katalog hinzufügen, neues Produkt, entfernen"
+
+msgid "save / back (twice to throw away changes)"
+msgstr "speichern / zurück (zweimal verwirft Änderungen)"
+
+msgid "After saving or editing (e), changed products and prices can be written to the template."
+msgstr "Nach dem Speichern oder Bearbeiten (e) können geänderte Produkte und Preise in die Vorlage übernommen werden."
+
+msgid "Update the template \"{}\"?"
+msgstr "Vorlage \"{}\" aktualisieren?"
+
+msgid " space choose · enter write chosen · n / esc keep the template as it is "
+msgstr " Leertaste wählen · enter Gewählte übernehmen · n / esc Vorlage nicht ändern "
+
+msgid "The catalog of this project changed. Should new projects get these products and prices too? Choose no for special prices of this customer."
+msgstr "Der Katalog dieses Projekts hat sich geändert. Sollen neue Projekte diese Produkte und Preise auch bekommen? Nein wählen bei Sonderpreisen für diesen Kunden."
+
+msgid "Offer · {}"
+msgstr "Angebot · {}"
+
+msgid "not saved"
+msgstr "nicht gespeichert"
+
+msgid "not in template"
+msgstr "nicht in der Vorlage"
+
+msgid "template {}"
+msgstr "Vorlage {}"
+
+msgid "without catalog"
+msgstr "ohne Katalog"
+
+msgid "{} (−{} back)"
+msgstr "{} (−{} zurück)"
+
+msgid "{} (sold {})"
+msgstr "{} (verkauft {})"
+
+msgid "No products yet: a adds one from the catalog, n a new one."
+msgstr "Noch keine Produkte: a fügt eins aus dem Katalog hinzu, n ein neues."
+
+msgid "Product"
+msgstr "Produkt"
+
+msgid "Sum"
+msgstr "Summe"
+
+msgid "Sum before tax"
+msgstr "Summe netto"
+
+msgid "plus VAT"
+msgstr "zzgl. MwSt."
+
+msgid "total"
+msgstr "gesamt"
+
+msgid "Products only; staff hours and products with their own tax are added in the PDF."
+msgstr "Nur Produkte; Personalstunden und Produkte mit eigenem Steuersatz kommen im PDF dazu."
+
+msgid "Quantity"
+msgstr "Menge"
+
+msgid "Take back that {} accepted the offer?"
+msgstr "Zurücknehmen, dass {} das Angebot angenommen hat?"
+
+msgid "Did the client accept the offer for {}?"
+msgstr "Hat der Kunde das Angebot für {} angenommen?"
+
+msgid "nothing saved"
+msgstr "nichts gespeichert"
+
+msgid "{}: nothing used (the offer keeps it)"
+msgstr "{}: nichts verbraucht (bleibt im Angebot)"
+
+msgid "Add a product that was used extra"
+msgstr "Zusätzlich verbrauchtes Produkt hinzufügen"
+
+msgid "actually used, offered were {}"
+msgstr "tatsächlich verbraucht, angeboten waren {}"
+
+msgid "Used"
+msgstr "Verbraucht"
+
+msgid "used, but not in the offer"
+msgstr "verbraucht, aber nicht im Angebot"
+
+msgid "Accepted"
+msgstr "Angenommen"
+
+msgid "Catering"
+msgstr "Catering"
+
+msgid "Actual usage"
+msgstr "Verbrauch"
+
+msgid "Paid"
+msgstr "Bezahlt"
+
+msgid "Archived"
+msgstr "Archiviert"
+
+msgid "write offer"
+msgstr "Angebot schreiben"
+
+msgid "wait for OK"
+msgstr "auf Zusage warten"
+
+msgid "catering"
+msgstr "Catering"
+
+msgid "note usage"
+msgstr "Verbrauch eintragen"
+
+msgid "wait for money"
+msgstr "auf Zahlung warten"
+
+msgid "PDF created"
+msgstr "PDF erstellt"
+
+msgid "m creates the offer PDF (products: o)"
+msgstr "m erstellt das Angebots-PDF (Produkte: o)"
+
+msgid "{}; fill in with p or e, products with o"
+msgstr "{}; ausfüllen mit p oder e, Produkte mit o"
+
+msgid "accepted by the client (A takes it back)"
+msgstr "vom Kunden angenommen (A nimmt es zurück)"
+
+msgid "not marked, but the project went on"
+msgstr "nicht markiert, aber das Projekt ging weiter"
+
+msgid "A when the client accepted the offer"
+msgstr "A wenn der Kunde das Angebot angenommen hat"
+
+msgid "waiting for the client"
+msgstr "wartet auf den Kunden"
+
+msgid "in {} days"
+msgstr "in {} Tagen"
+
+msgid "tomorrow"
+msgstr "morgen"
+
+msgid "no date"
+msgstr "kein Datum"
+
+msgid "noted for all {} products"
+msgstr "für alle {} Produkte eingetragen"
+
+msgid "noted for {} of {} products, the others count as offered"
+msgstr "für {} von {} Produkten eingetragen, die anderen zählen wie angeboten"
+
+msgid "not noted, the invoice uses the offered amounts"
+msgstr "nicht eingetragen, die Rechnung nimmt die angebotenen Mengen"
+
+msgid "no products"
+msgstr "keine Produkte"
+
+msgid "noted for {} of {} products"
+msgstr "für {} von {} Produkten eingetragen"
+
+msgid "not noted yet"
+msgstr "noch nicht eingetragen"
+
+msgid "u notes what was actually used (returned, extra)"
+msgstr "u trägt ein, was wirklich verbraucht wurde (zurück, zusätzlich)"
+
+msgid "no PDF here (m creates it)"
+msgstr "kein PDF hier (m erstellt es)"
+
+msgid "I assigns the number"
+msgstr "I vergibt die Nummer"
+
+msgid "p sets invoice/date"
+msgstr "p setzt invoice/date"
+
+msgid "m creates the invoice PDF"
+msgstr "m erstellt das Rechnungs-PDF"
+
+msgid "client paid {}"
+msgstr "Kunde bezahlt {}"
+
+msgid "client: open"
+msgstr "Kunde: offen"
+
+msgid "no staff"
+msgstr "kein Personal"
+
+msgid "wages paid {}"
+msgstr "Löhne bezahlt {}"
+
+msgid "wages: open"
+msgstr "Löhne: offen"
+
+msgid "p sets invoice/payed_date"
+msgstr "p setzt invoice/payed_date"
+
+msgid "p sets hours/wages_date"
+msgstr "p setzt hours/wages_date"
+
+msgid "a archives the project"
+msgstr "a archiviert das Projekt"
+
+msgid "{}; a archives anyway"
+msgstr "{}; a archiviert trotzdem"
+
+msgid "saved in {}"
+msgstr "gespeichert in {}"
+
+msgid "offer marked as accepted"
+msgstr "Angebot als angenommen markiert"
+
+msgid "offer no longer marked as accepted"
+msgstr "Angebot nicht mehr als angenommen markiert"
+
+msgid "esc back · o offer · A accepted · u usage · I invoice no. · m PDF · p field · e edit · a archive · ? help"
+msgstr "esc zurück · o Angebot · A angenommen · u Verbrauch · I Rechnungsnr. · m PDF · p Feld · e bearbeiten · a archivieren · ? Hilfe"
+
+msgid "esc back · +/- used · = as offered · 0 none · enter change · a/n used extra · s save"
+msgstr "esc zurück · +/- verbraucht · = wie angeboten · 0 nichts · enter ändern · a/n zusätzlich · s speichern"
+
+msgid "done"
+msgstr "fertig"
+
+msgid "Next"
+msgstr "Als Nächstes"
+
+msgid "Fields"
+msgstr "Felder"
+
+msgid "all fields filled in"
+msgstr "alle Felder ausgefüllt"
+
+msgid "the client accepted the offer (or take it back)"
+msgstr "der Kunde hat das Angebot angenommen (oder zurücknehmen)"
+
+msgid "note the actual usage after the catering"
+msgstr "den Verbrauch nach dem Catering eintragen"
+
+msgid "Actual usage (u), after the catering"
+msgstr "Verbrauch (u), nach dem Catering"
+
+msgid "more / less used, as offered, nothing used"
+msgstr "mehr / weniger verbraucht, wie angeboten, nichts verbraucht"
+
+msgid "a product that was used but not offered"
+msgstr "ein Produkt, das verbraucht, aber nicht angeboten wurde"
+
+msgid "save: products not counted count as used like offered"
+msgstr "speichern: nicht gezählte Produkte gelten als wie angeboten verbraucht"
+
+msgid "Done: the project is archived."
+msgstr "Fertig: das Projekt ist archiviert."
+
+msgid "Next:"
+msgstr "Als Nächstes:"
+
+msgid "canceled"
+msgstr "abgesagt"
+
+msgid "Lifecycle"
+msgstr "Ablauf"
+
+msgid "Actual usage · {}"
+msgstr "Verbrauch · {}"
+
+msgid "not counted yet"
+msgstr "noch nicht gezählt"
+
+msgid "{} more than offered"
+msgstr "{} mehr als angeboten"
+
+msgid "{} back"
+msgstr "{} zurück"
+
+msgid "as offered"
+msgstr "wie angeboten"
+
+msgid "used {}"
+msgstr "verbraucht {}"
+
+msgid "Used, before tax"
+msgstr "Verbraucht, netto"
+
+msgid "Every product is counted. s saves, then the invoice is next."
+msgstr "Alle Produkte sind gezählt. s speichert, danach kommt die Rechnung."
+
+msgid "{} products not counted yet: saving counts them as used like offered."
+msgstr "{} Produkte noch nicht gezählt: beim Speichern gelten sie als wie angeboten verbraucht."
+
+msgid "{} could not be removed safely, change it with the editor (e)"
+msgstr "{} konnte nicht sicher entfernt werden, mit dem Editor ändern (e)"
+
+msgid "e-invoice ready"
+msgstr "E-Rechnung bereit"
+
+msgid "e-invoice incomplete"
+msgstr "E-Rechnung unvollständig"
+
+msgid "e-invoice needs: {}"
+msgstr "E-Rechnung braucht: {}"
+
+msgid "created {} with the ZUGFeRD e-invoice attached"
+msgstr "{} erstellt, mit angehängter ZUGFeRD-E-Rechnung"
+
+msgid "E-invoice (ZUGFeRD)"
+msgstr "E-Rechnung (ZUGFeRD)"
+
+msgid "complete, m attaches it to the invoice PDF"
+msgstr "vollständig, m hängt sie an das Rechnungs-PDF an"
+
+msgid "ZUGFeRD e-invoice attached ({})"
+msgstr "ZUGFeRD-E-Rechnung angehängt ({})"
+
+msgid "client address: no line with postcode and city"
+msgstr "Kundenadresse: keine Zeile mit PLZ und Ort"
+
+msgid "client address: the first line has to be the name"
+msgstr "Kundenadresse: die erste Zeile muss der Name sein"
+
+msgid "client address: unknown country {}"
+msgstr "Kundenadresse: unbekanntes Land {}"
+
+msgid "client address: more than one line after postcode and city"
+msgstr "Kundenadresse: mehr als eine Zeile nach PLZ und Ort"
+
+msgid "zugferd/{} in the config"
+msgstr "zugferd/{} in der Konfiguration"
+
+msgid "zugferd/seller/vat_id or zugferd/seller/tax_number in the config"
+msgstr "zugferd/seller/vat_id oder zugferd/seller/tax_number in der Konfiguration"
+
+msgid "invoice number and date"
+msgstr "Rechnungsnummer und -datum"
+
+msgid "client address"
+msgstr "Kundenadresse"
+
+msgid "a valid bill ({})"
+msgstr "eine gültige Rechnung ({})"
+
+msgid "invoice items"
+msgstr "Rechnungsposten"
+
+msgid "zugferd/exemption_reason in the config (there are items without VAT)"
+msgstr "zugferd/exemption_reason in der Konfiguration (es gibt Posten ohne MwSt.)"
+
+# TUI usability rework
+msgid "{}: {}"
+msgstr "{}: {}"
+
+msgid "a adds one from the catalog, n a new one; Ctrl+P lists everything."
+msgstr "a fügt eins aus dem Katalog hinzu, n ein neues; Ctrl+P zeigt alles."
+
+msgid "accepted"
+msgstr "angenommen"
+
+msgid "accepted by the client (Shift+A takes it back)"
+msgstr "vom Kunden angenommen (Shift+A nimmt es zurück)"
+
+msgid "actions"
+msgstr "Aktionen"
+
+msgid "Actions"
+msgstr "Aktionen"
+
+msgid "Actions · Enter runs · Esc closes"
+msgstr "Aktionen · Enter führt aus · Esc schließt"
+
+msgid "Actual usage editor"
+msgstr "Verbrauchs-Editor"
+
+msgid "a date like 24.12.2026, also 24.12.26 or 24.12."
+msgstr "ein Datum wie 24.12.2026, auch 24.12.26 oder 24.12."
+
+msgid "add"
+msgstr "hinzufügen"
+
+msgid "Add from the catalog"
+msgstr "Aus dem Katalog hinzufügen"
+
+msgid "add, remove and change products without editing the file"
+msgstr "Produkte hinzufügen, entfernen und ändern, ohne die Datei zu bearbeiten"
+
+msgid "A default template is put into templates. Existing files are not touched."
+msgstr "Eine Standardvorlage kommt nach templates. Vorhandene Dateien bleiben unberührt."
+
+msgid "after the catering: what was actually used, returned or extra"
+msgstr "nach dem Catering: was tatsächlich verbraucht, zurückgegeben oder zusätzlich war"
+
+msgid "afterwards, open the new file in your editor"
+msgstr "danach die neue Datei im Editor öffnen"
+
+msgid "all commands and projects, type to search"
+msgstr "alle Befehle und Projekte, tippen zum Suchen"
+
+msgid "all events of the year as a calendar file, into the output folder"
+msgstr "alle Veranstaltungen des Jahres als Kalenderdatei in den Ausgabeordner"
+
+msgid "all project folders can be read"
+msgstr "alle Projektordner sind lesbar"
+
+msgid "All project folders can be read."
+msgstr "Alle Projektordner sind lesbar."
+
+msgid "all projects of the year as a table, into the output folder"
+msgstr "alle Projekte des Jahres als Tabelle in den Ausgabeordner"
+
+msgid "All wages paid."
+msgstr "Alle Löhne bezahlt."
+
+msgid "All years"
+msgstr "Alle Jahre"
+
+msgid "amount"
+msgstr "Menge"
+
+msgid "App"
+msgstr "App"
+
+msgid "a product of the project catalog or the template"
+msgstr "ein Produkt aus dem Projektkatalog oder der Vorlage"
+
+msgid "a product that is in no catalog yet"
+msgstr "ein Produkt, das noch in keinem Katalog steht"
+
+msgid "Archive"
+msgstr "Archiv"
+
+msgid "Archive anyway"
+msgstr "Trotzdem archivieren"
+
+msgid "archived"
+msgstr "archiviert"
+
+msgid "archived in {} (read-only)"
+msgstr "archiviert in {} (nur lesen)"
+
+msgid "Archived projects are not changed any more. Fill these in first (Project details), or archive anyway."
+msgstr "Archivierte Projekte werden nicht mehr geändert. Erst diese Felder ausfüllen (Projektdaten) oder trotzdem archivieren."
+
+msgid "Archive the project"
+msgstr "Projekt archivieren"
+
+msgid "archive the project (a)"
+msgstr "Projekt archivieren (a)"
+
+msgid "{}; archiving anyway is possible (a)"
+msgstr "{}; trotzdem archivieren geht (a)"
+
+msgid "a running project is already called \"{}\""
+msgstr "ein laufendes Projekt heißt schon \"{}\""
+
+msgid "by date or bill number: ascending, descending, then the other one"
+msgstr "nach Datum oder Rechnungsnummer: aufsteigend, absteigend, dann die andere Sortierung"
+
+msgid "asciii cannot open the project folder yet."
+msgstr "asciii kann den Projektordner noch nicht öffnen."
+
+msgid "asciii needs at least {}×{}, this one is {}×{}."
+msgstr "asciii braucht mindestens {}×{}, dieses hat {}×{}."
+
+msgid "Assign {}"
+msgstr "{} vergeben"
+
+msgid "Assign the invoice number"
+msgstr "Rechnungsnummer vergeben"
+
+msgid "assign the invoice number first"
+msgstr "erst die Rechnungsnummer vergeben"
+
+msgid "assign the invoice number (Shift+I)"
+msgstr "Rechnungsnummer vergeben (Shift+I)"
+
+msgid "{} at a glance"
+msgstr "{} auf einen Blick"
+
+msgid "Back"
+msgstr "Zurück"
+
+msgid "Basics"
+msgstr "Grundlagen"
+
+msgid "Broken ({})"
+msgstr "Kaputt ({})"
+
+msgid "Broken: {}"
+msgstr "Kaputt: {}"
+
+msgid "Broken projects"
+msgstr "Kaputte Projekte"
+
+msgid "buttons"
+msgstr "Knöpfe"
+
+msgid "Calendar written"
+msgstr "Kalender geschrieben"
+
+msgid "Cancel"
+msgstr "Abbrechen"
+
+msgid "cannot be emptied here, use Edit file"
+msgstr "kann hier nicht geleert werden, Datei bearbeiten nutzen"
+
+msgid "change"
+msgstr "ändern"
+
+msgid "changes discarded"
+msgstr "Änderungen verworfen"
+
+msgid "Change the product"
+msgstr "Produkt ändern"
+
+msgid "choose"
+msgstr "wählen"
+
+msgid "clear"
+msgstr "leeren"
+
+msgid "click tabs, rows, buttons and hints; Shift-drag (Option-drag in macOS Terminal) selects text"
+msgstr "Tabs, Zeilen, Knöpfe und Hinweise anklicken; Shift-Ziehen (Option-Ziehen im macOS-Terminal) markiert Text"
+
+msgid "Client accepted the offer"
+msgstr "Kunde hat das Angebot angenommen"
+
+msgid "Client address"
+msgstr "Kundenadresse"
+
+msgid "Client e-mail"
+msgstr "Kunden-E-Mail"
+
+msgid "Client first name"
+msgstr "Vorname des Kunden"
+
+msgid "Client last name"
+msgstr "Nachname des Kunden"
+
+msgid "client paid: set the date"
+msgstr "Kunde hat bezahlt: Datum eintragen"
+
+msgid "Client paid: set the date"
+msgstr "Kunde hat bezahlt: Datum eintragen"
+
+msgid "Client title"
+msgstr "Anrede des Kunden"
+
+msgid "Close"
+msgstr "Schließen"
+
+msgid "Colours in the lists"
+msgstr "Farben in den Listen"
+
+msgid "commands"
+msgstr "Befehle"
+
+msgid "Commands"
+msgstr "Befehle"
+
+msgid "Commands and projects"
+msgstr "Befehle und Projekte"
+
+msgid "complete, it is attached to the invoice PDF"
+msgstr "vollständig, sie wird an das Rechnungs-PDF angehängt"
+
+msgid "could not open {}: {}"
+msgstr "konnte {} nicht öffnen: {}"
+
+msgid "Create"
+msgstr "Anlegen"
+
+msgid "Create again"
+msgstr "Neu erstellen"
+
+msgid "Create anyway"
+msgstr "Trotzdem erstellen"
+
+msgid "Create a PDF"
+msgstr "PDF erstellen"
+
+msgid "Create a PDF for {}"
+msgstr "PDF für {} erstellen"
+
+msgid "create a project from a template"
+msgstr "ein Projekt aus einer Vorlage anlegen"
+
+msgid "Create empty project folder"
+msgstr "Leeren Projektordner anlegen"
+
+msgid "create folder"
+msgstr "Ordner anlegen"
+
+msgid "create the folders working, archive and templates with a default template"
+msgstr "die Ordner working, archive und templates mit einer Standardvorlage anlegen"
+
+msgid "Create the invoice PDF"
+msgstr "Rechnungs-PDF erstellen"
+
+msgid "create the invoice PDF (m)"
+msgstr "Rechnungs-PDF erstellen (m)"
+
+msgid "create the offer or invoice PDF (pdflatex)"
+msgstr "Angebots- oder Rechnungs-PDF erstellen (pdflatex)"
+
+msgid "Create the offer PDF"
+msgstr "Angebots-PDF erstellen"
+
+msgid "create the offer PDF (m); products: edit the offer (o)"
+msgstr "Angebots-PDF erstellen (m); Produkte: Angebot bearbeiten (o)"
+
+msgid "Create {} with the folders working, archive and templates?"
+msgstr "{} mit den Ordnern working, archive und templates anlegen?"
+
+msgid "CSV written"
+msgstr "CSV geschrieben"
+
+msgid "delete"
+msgstr "löschen"
+
+msgid "Delete {} and its folder {}? This cannot be undone."
+msgstr "{} und den Ordner {} löschen? Das lässt sich nicht rückgängig machen."
+
+msgid "Delete the project"
+msgstr "Projekt löschen"
+
+msgid "delete the project folder (asks for the name)"
+msgstr "den Projektordner löschen (fragt nach dem Namen)"
+
+msgid "details"
+msgstr "Details"
+
+msgid "(details in the Log tab · any key hides this)"
+msgstr "(Details im Log-Tab · jede Taste blendet das aus)"
+
+msgid "Details of {}"
+msgstr "Projektdaten von {}"
+
+msgid "Discard"
+msgstr "Verwerfen"
+
+msgid "{} does nothing here; ? shows the keys, {} lists all commands"
+msgstr "{} tut hier nichts; ? zeigt die Tasten, {} listet alle Befehle"
+
+msgid "do the highlighted thing"
+msgstr "das Markierte ausführen"
+
+msgid "edit file"
+msgstr "Datei bearbeiten"
+
+msgid "Edit file"
+msgstr "Datei bearbeiten"
+
+msgid "Editor"
+msgstr "Editor"
+
+msgid "Edit the offer"
+msgstr "Angebot bearbeiten"
+
+msgid "Edit the project file"
+msgstr "Projektdatei bearbeiten"
+
+msgid "e.g. 18:00; optional"
+msgstr "z.B. 18:00; optional"
+
+msgid "e.g. 23:00; optional"
+msgstr "z.B. 23:00; optional"
+
+msgid "e.g. 24.12.2026; empty = in two weeks"
+msgstr "z.B. 24.12.2026; leer = in zwei Wochen"
+
+msgid "e.g. Sommerball"
+msgstr "z.B. Sommerball"
+
+msgid "(Enter: actions)"
+msgstr "(Enter: Aktionen)"
+
+msgid " Enter choose · Esc cancel "
+msgstr " Enter wählt · Esc bricht ab "
+
+msgid "Enter runs · Esc closes · greyed out: not available here, with the reason"
+msgstr "Enter führt aus · Esc schließt · grau: hier nicht verfügbar, mit Grund"
+
+msgid "(Enter runs it, see Actions)"
+msgstr "(Enter führt es aus, siehe Aktionen)"
+
+msgid "Enter shows why a folder is broken"
+msgstr "Enter zeigt, warum ein Ordner kaputt ist"
+
+msgid "(Esc clears)"
+msgstr "(Esc leert)"
+
+msgid " Esc closes "
+msgstr " Esc schließt "
+
+msgid "Event date"
+msgstr "Veranstaltungsdatum"
+
+msgid "Event name"
+msgstr "Name der Veranstaltung"
+
+msgid "every catalog product is in the offer already; use New product"
+msgstr "jedes Katalogprodukt ist schon im Angebot; Neues Produkt nutzen"
+
+msgid "Everything else works. Actions that need a missing program are shown greyed out with the reason."
+msgstr "Alles andere funktioniert. Aktionen, die ein fehlendes Programm brauchen, sind grau und nennen den Grund."
+
+msgid "Everything is filled in. Change what you need; only changed fields are written."
+msgstr "Alles ist ausgefüllt. Ändere, was nötig ist; nur geänderte Felder werden geschrieben."
+
+msgid "everything that was offered was used"
+msgstr "alles Angebotene wurde verbraucht"
+
+msgid "Expected in"
+msgstr "Erwartet in"
+
+msgid "Export"
+msgstr "Export"
+
+msgid "Export calendar"
+msgstr "Kalender exportieren"
+
+msgid "Export CSV"
+msgstr "CSV exportieren"
+
+msgid "Export the year as calendar (.ics)"
+msgstr "Jahr als Kalender exportieren (.ics)"
+
+msgid "Export the year as CSV"
+msgstr "Jahr als CSV exportieren"
+
+msgid "{} fields are still empty (marked !). Only changed fields are written."
+msgstr "{} Felder sind noch leer (mit ! markiert). Nur geänderte Felder werden geschrieben."
+
+msgid "File: {}"
+msgstr "Datei: {}"
+
+msgid "File format version"
+msgstr "Version des Dateiformats"
+
+msgid "fill in client, dates, invoice number and manager in one form"
+msgstr "Kunde, Daten, Rechnungsnummer und Verantwortliche in einem Formular ausfüllen"
+
+msgid "{}; fill in with Project details (p)"
+msgstr "{}; ausfüllen mit Projektdaten (p)"
+
+msgid "filter by name, invoice number or manager"
+msgstr "nach Name, Rechnungsnummer oder Verantwortlichen filtern"
+
+msgid "• Get the shared projects: in a normal terminal run  asciii bootstrap <repository-url>"
+msgstr "• Gemeinsame Projekte holen: in einem normalen Terminal  asciii bootstrap <Repository-URL>  ausführen"
+
+msgid "Git"
+msgstr "Git"
+
+msgid "Git: commit"
+msgstr "Git: Commit"
+
+msgid "git is not installed"
+msgstr "git ist nicht installiert"
+
+msgid "Git: pull from the remote"
+msgstr "Git: vom Server holen (pull)"
+
+msgid "Git: push to the remote"
+msgstr "Git: zum Server schicken (push)"
+
+msgid "Git: show changed files"
+msgstr "Git: geänderte Dateien zeigen"
+
+msgid "Git: show changes"
+msgstr "Git: Änderungen zeigen"
+
+msgid "Git: show history"
+msgstr "Git: Verlauf zeigen"
+
+msgid "Git: stage all changes"
+msgstr "Git: alle Änderungen vormerken"
+
+msgid "Go to the dashboard"
+msgstr "Zur Übersicht"
+
+msgid "Go to the log"
+msgstr "Zum Log"
+
+msgid "Go to the project list"
+msgstr "Zur Projektliste"
+
+msgid "{} has none of the fields this form fills in; use Edit file"
+msgstr "{} hat keines der Felder dieses Formulars; Datei bearbeiten nutzen"
+
+msgid "help"
+msgstr "Hilfe"
+
+msgid "Help · Esc closes"
+msgstr "Hilfe · Esc schließt"
+
+msgid "Help · lines {}–{} of {} · ↑↓ PgUp PgDn · Esc closes"
+msgstr "Hilfe · Zeilen {}–{} von {} · ↑↓ PgUp PgDn · Esc schließt"
+
+msgid "Here: {}"
+msgstr "Hier: {}"
+
+msgid "Hourly wage"
+msgstr "Stundenlohn"
+
+msgid "How to fix it"
+msgstr "So geht es weiter"
+
+msgid "install git"
+msgstr "git installieren"
+
+msgid "install TeX Live (it brings pdflatex), or set document_export/convert_tool in ~/.asciii.yml"
+msgstr "TeX Live installieren (bringt pdflatex mit) oder document_export/convert_tool in ~/.asciii.yml setzen"
+
+msgid "{} in this folder"
+msgstr "{} in diesem Ordner"
+
+msgid "Invoice date"
+msgstr "Rechnungsdatum"
+
+msgid "invoice no."
+msgstr "Rechnungsnr."
+
+msgid "Invoice number"
+msgstr "Rechnungsnummer"
+
+msgid "Invoice numbers must be unique per year. Fix the number in Project details first."
+msgstr "Rechnungsnummern müssen pro Jahr eindeutig sein. Erst die Nummer in den Projektdaten korrigieren."
+
+msgid "Invoices, payments, wages and archiving show up here when they are due."
+msgstr "Rechnungen, Zahlungen, Löhne und Archivieren erscheinen hier, wenn sie fällig sind."
+
+msgid "{} is missing:"
+msgstr "{} fehlt:"
+
+msgid "{} is not a git repository: no history, no backup, no sharing."
+msgstr "{} ist kein git-Repository: kein Verlauf, keine Sicherung, kein Teilen."
+
+msgid "{} is not installed, PDFs cannot be created here"
+msgstr "{} ist nicht installiert, hier lassen sich keine PDFs erstellen"
+
+msgid "\"{}\" is not in the project file; use Edit file"
+msgstr "\"{}\" steht nicht in der Projektdatei; Datei bearbeiten nutzen"
+
+msgid "{} is NOT ready, it is archived anyway into the folder of this year:"
+msgstr "{} ist NICHT fertig und wird trotzdem in den Ordner dieses Jahres archiviert:"
+
+msgid "{} is not set in the configuration"
+msgstr "{} ist in der Konfiguration nicht gesetzt"
+
+msgid "{} is ready to be archived. It moves into the archive folder of this year:"
+msgstr "{} kann archiviert werden. Es kommt in den Archivordner dieses Jahres:"
+
+msgid "It is the next free number of {}. Once invoices are sent, numbers must not change."
+msgstr "Das ist die nächste freie Nummer von {}. Verschickte Rechnungsnummern dürfen sich nicht mehr ändern."
+
+msgid "Keep editing"
+msgstr "Weiter bearbeiten"
+
+msgid "keep filter"
+msgstr "Filter behalten"
+
+msgid "keep the template"
+msgstr "Vorlage behalten"
+
+msgid "Keep the template"
+msgstr "Vorlage behalten"
+
+msgid "leave asciii (asks first if the offer has unsaved changes)"
+msgstr "asciii verlassen (fragt vorher, wenn das Angebot ungespeichert ist)"
+
+msgid "Less"
+msgstr "Weniger"
+
+msgid " lines {}–{} of {} · PgUp/PgDn "
+msgstr " Zeilen {}–{} von {} · PgUp/PgDn "
+
+msgid " lines {}–{} of {} · ↑↓ PgUp PgDn · Esc closes "
+msgstr " Zeilen {}–{} von {} · ↑↓ PgUp PgDn · Esc schließt "
+
+msgid "List"
+msgstr "Liste"
+
+msgid "log"
+msgstr "Log"
+
+msgid "Log · empty"
+msgstr "Log · leer"
+
+msgid "Log · {} lines"
+msgstr "Log · {} Zeilen"
+
+msgid "Log · lines {}–{} of {} · ↑↓ PgUp PgDn, End newest"
+msgstr "Log · Zeilen {}–{} von {} · ↑↓ PgUp PgDn, End neueste"
+
+msgid "Make the window larger, or press Ctrl+Q to quit."
+msgstr "Fenster vergrößern oder Ctrl+Q zum Beenden drücken."
+
+msgid "Missing"
+msgstr "Fehlt"
+
+msgid "More"
+msgstr "Mehr"
+
+msgid "more or less of the highlighted product"
+msgstr "mehr oder weniger vom markierten Produkt"
+
+msgid "Mouse"
+msgstr "Maus"
+
+msgid "Mouse: off (for selecting text)"
+msgstr "Maus: aus (zum Text markieren)"
+
+msgid "mouse off: the terminal selects text as usual; Ctrl+P → Mouse turns it on again"
+msgstr "Maus aus: das Terminal markiert Text wie gewohnt; Ctrl+P → Maus schaltet sie wieder ein"
+
+msgid "Mouse: on"
+msgstr "Maus: an"
+
+msgid "mouse on: click and scroll; Shift-drag still selects text"
+msgstr "Maus an: klicken und scrollen; Shift-Ziehen markiert weiterhin Text"
+
+msgid "Mouse: on/off"
+msgstr "Maus: an/aus"
+
+msgid "Move back"
+msgstr "Zurückholen"
+
+msgid "move in lists, scroll pages (also Home, End and the mouse wheel)"
+msgstr "in Listen bewegen, Seiten blättern (auch Home, End und das Mausrad)"
+
+msgid "move the finished project into the archive of its year, or back"
+msgstr "das fertige Projekt ins Archiv seines Jahres verschieben oder zurück"
+
+msgid "Navigate"
+msgstr "Bewegen"
+
+msgid "n creates one, ← and → change the year, 2 shows the list of all projects."
+msgstr "n legt eins an, ← und → wechseln das Jahr, 2 zeigt die Liste aller Projekte."
+
+msgid "needed for \"Edit the project file\""
+msgstr "nötig für \"Projektdatei bearbeiten\""
+
+msgid "needed to create PDFs"
+msgstr "nötig, um PDFs zu erstellen"
+
+msgid "new"
+msgstr "neu"
+
+msgid "new product"
+msgstr "neues Produkt"
+
+msgid "next"
+msgstr "weiter"
+
+msgid "Next tab"
+msgstr "Nächster Tab"
+
+msgid "Next year"
+msgstr "Nächstes Jahr"
+
+msgid "no"
+msgstr "nein"
+
+msgid "No"
+msgstr "Nein"
+
+msgid "no editor found ($EDITOR)"
+msgstr "kein Editor gefunden ($EDITOR)"
+
+msgid "no editor found: set $EDITOR, e.g. to \"code --wait\""
+msgstr "kein Editor gefunden: $EDITOR setzen, z.B. auf \"code --wait\""
+
+msgid "No events in the next 30 days."
+msgstr "Keine Veranstaltungen in den nächsten 30 Tagen."
+
+msgid "(none)"
+msgstr "(keine)"
+
+msgid "no PDF here yet (m)"
+msgstr "hier noch kein PDF (m)"
+
+msgid "no product selected"
+msgstr "kein Produkt ausgewählt"
+
+msgid "No products yet."
+msgstr "Noch keine Produkte."
+
+msgid "no project file found in this folder"
+msgstr "keine Projektdatei in diesem Ordner gefunden"
+
+msgid "no project in the list"
+msgstr "kein Projekt in der Liste"
+
+msgid "no projects are loaded"
+msgstr "keine Projekte geladen"
+
+msgid "No projects here. ‹All years› or ← → show other years, n creates a project."
+msgstr "Hier sind keine Projekte. ‹Alle Jahre› oder ← → zeigen andere Jahre, n legt ein Projekt an."
+
+msgid "No projects in {}."
+msgstr "Keine Projekte in {}."
+
+msgid "Not available:"
+msgstr "Nicht verfügbar:"
+
+msgid "(not created yet)"
+msgstr "(noch nicht erstellt)"
+
+msgid "note that the client accepted the offer, or take it back"
+msgstr "vermerken, dass der Kunde das Angebot angenommen hat, oder zurücknehmen"
+
+msgid "Note the actual usage"
+msgstr "Verbrauch eintragen"
+
+msgid "note what was actually used, returned or extra (u)"
+msgstr "eintragen, was tatsächlich verbraucht, zurückgegeben oder zusätzlich war (u)"
+
+msgid "not filled in (p)"
+msgstr "nicht ausgefüllt (p)"
+
+msgid "nothing changed; Esc closes the form"
+msgstr "nichts geändert; Esc schließt das Formular"
+
+msgid " nothing matches"
+msgstr " nichts passt"
+
+msgid "Nothing matches \"{}\". Esc clears the search."
+msgstr "Nichts passt zu \"{}\". Esc leert die Suche."
+
+msgid "nothing of the highlighted product was used"
+msgstr "vom markierten Produkt wurde nichts verbraucht"
+
+msgid "Nothing to do."
+msgstr "Nichts zu tun."
+
+msgid "nothing to do now: {}"
+msgstr "gerade nichts zu tun: {}"
+
+msgid "Nothing to do right now; the project waits for the next step."
+msgstr "Gerade nichts zu tun; das Projekt wartet auf den nächsten Schritt."
+
+msgid "Nothing used"
+msgstr "Nichts verbraucht"
+
+msgid "Not ready for the archive"
+msgstr "Nicht bereit fürs Archiv"
+
+msgid "not saved (s saves)"
+msgstr "nicht gespeichert (s speichert)"
+
+msgid "offer"
+msgstr "Angebot"
+
+msgid "Offer accepted"
+msgstr "Angebot angenommen"
+
+msgid "Offer appendix"
+msgstr "Angebotsanhang"
+
+msgid "Offer date"
+msgstr "Angebotsdatum"
+
+msgid "Offer editor"
+msgstr "Angebots-Editor"
+
+msgid "Offer, Invoice: ✓ ready (bold: the PDF exists) · Paid: € client and staff, yellow € partly · Archive: ✓ ready, ▪ archived"
+msgstr "Angebot, Rechnung: ✓ fertig (fett: das PDF existiert) · Bezahlt: € Kunde und Personal, gelbes € teilweise · Archiv: ✓ bereit, ▪ archiviert"
+
+msgid "Official invoice number"
+msgstr "Offizielle Rechnungsnummer"
+
+msgid "OK"
+msgstr "OK"
+
+msgid "one step back: close the page, the editor or the search"
+msgstr "einen Schritt zurück: Seite, Editor oder Suche schließen"
+
+msgid "one step back; never quits and never drops changes without asking"
+msgstr "einen Schritt zurück; beendet nie und verwirft nie Änderungen ohne Nachfrage"
+
+msgid "open"
+msgstr "öffnen"
+
+msgid "Open"
+msgstr "Öffnen"
+
+msgid "Open {}"
+msgstr "{} öffnen"
+
+msgid "Open {} (archive {})"
+msgstr "{} öffnen (Archiv {})"
+
+msgid "Open folder"
+msgstr "Ordner öffnen"
+
+msgid "Open it"
+msgstr "Öffnen"
+
+msgid "Open log"
+msgstr "Log öffnen"
+
+msgid "open the highlighted line"
+msgstr "die markierte Zeile öffnen"
+
+msgid "Open the project"
+msgstr "Projekt öffnen"
+
+msgid "open the project file in your editor"
+msgstr "die Projektdatei im Editor öffnen"
+
+msgid "Open the project folder"
+msgstr "Projektordner öffnen"
+
+msgid "Open the to-do"
+msgstr "Aufgabe öffnen"
+
+msgid "• Or point the configuration to the right folder: set path and dirs/storage in ~/.asciii.yml"
+msgstr "• Oder die Konfiguration auf den richtigen Ordner zeigen lassen: path und dirs/storage in ~/.asciii.yml setzen"
+
+msgid "←/→ or Space to choose"
+msgstr "←/→ oder Leertaste zum Wählen"
+
+msgid "• Or start empty here: \"Create empty project folder\" below"
+msgstr "• Oder hier leer anfangen: \"Leeren Projektordner anlegen\" unten"
+
+msgid "path and dirs/storage in {}"
+msgstr "path und dirs/storage in {}"
+
+msgid "PDF"
+msgstr "PDF"
+
+msgid "PDF is up to date"
+msgstr "PDF ist aktuell"
+
+msgid "placeholders inside values, they would be printed as they are (Edit file, e): {}"
+msgstr "Platzhalter in Werten, sie würden so gedruckt (Datei bearbeiten, e): {}"
+
+msgid "please enter a number like 2,50"
+msgstr "bitte eine Zahl wie 2,50 eingeben"
+
+msgid "please enter a time like 18:30"
+msgstr "bitte eine Uhrzeit wie 18:30 eingeben"
+
+msgid "please enter a whole number like 42"
+msgstr "bitte eine ganze Zahl wie 42 eingeben"
+
+msgid "please fill this in"
+msgstr "bitte ausfüllen"
+
+msgid "press"
+msgstr "drücken"
+
+msgid "previous"
+msgstr "zurück"
+
+msgid "Previous tab"
+msgstr "Vorheriger Tab"
+
+msgid "Previous year"
+msgstr "Vorheriges Jahr"
+
+msgid "Problem (Enter: all of it)"
+msgstr "Problem (Enter: alles)"
+
+msgid "Products only; staff hours and own-tax products are added in the PDF."
+msgstr "Nur Produkte; Personalstunden und Produkte mit eigener Steuer kommen im PDF dazu."
+
+msgid "Project details"
+msgstr "Projektdaten"
+
+msgid "Project details (client, dates, …)"
+msgstr "Projektdaten (Kunde, Daten, …)"
+
+msgid "Project list"
+msgstr "Projektliste"
+
+msgid "Project page"
+msgstr "Projektseite"
+
+msgid "projects of the year, of all years, or folders that cannot be read"
+msgstr "Projekte des Jahres, aller Jahre oder Ordner, die nicht lesbar sind"
+
+msgid "Projects · {} shown"
+msgstr "Projekte · {} angezeigt"
+
+msgid "Pull"
+msgstr "Pull"
+
+msgid "Pull from the remote?"
+msgstr "Vom Server holen (pull)?"
+
+msgid "Pull now"
+msgstr "Jetzt holen"
+
+msgid "Push"
+msgstr "Push"
+
+msgid "Push to the remote?"
+msgstr "Zum Server schicken (push)?"
+
+msgid "quit"
+msgstr "beenden"
+
+msgid "Quit"
+msgstr "Beenden"
+
+msgid "quits on the three tabs; on the project page and in the editor it goes back"
+msgstr "beendet auf den drei Tabs; auf der Projektseite und im Editor geht es zurück"
+
+msgid "Quit without saving"
+msgstr "Beenden ohne Speichern"
+
+msgid "read all projects from disk again"
+msgstr "alle Projekte neu von der Platte lesen"
+
+msgid "Reload projects"
+msgstr "Projekte neu laden"
+
+msgid "remove"
+msgstr "entfernen"
+
+msgid "{} removed (not saved yet)"
+msgstr "{} entfernt (noch nicht gespeichert)"
+
+msgid "remove the highlighted product"
+msgstr "das markierte Produkt entfernen"
+
+msgid "Remove the product"
+msgstr "Produkt entfernen"
+
+msgid "run"
+msgstr "ausführen"
+
+msgid "running project"
+msgstr "laufendes Projekt"
+
+msgid "Salutation (comes from the client title)"
+msgstr "Anrede (ergibt sich aus der Anrede des Kunden)"
+
+msgid "save"
+msgstr "speichern"
+
+msgid "Save"
+msgstr "Speichern"
+
+msgid "Save and quit"
+msgstr "Speichern und beenden"
+
+msgid "saved: {}"
+msgstr "gespeichert: {}"
+
+msgid "scroll"
+msgstr "scrollen"
+
+msgid "search"
+msgstr "suchen"
+
+msgid "Search"
+msgstr "Suchen"
+
+msgid "Search:"
+msgstr "Suche:"
+
+msgid "search every command and project by name"
+msgstr "jeden Befehl und jedes Projekt nach Namen suchen"
+
+msgid "select a project first"
+msgstr "erst ein Projekt auswählen"
+
+msgid "set $EDITOR before starting asciii, e.g. export EDITOR=\"code --wait\""
+msgstr "$EDITOR vor dem Start von asciii setzen, z.B. export EDITOR=\"code --wait\""
+
+msgid "set by"
+msgstr "festgelegt durch"
+
+msgid "set it up with `git init` in that folder, or get the shared one with `asciii clone`"
+msgstr "mit `git init` in diesem Ordner einrichten oder das gemeinsame mit `asciii clone` holen"
+
+msgid "set the invoice date"
+msgstr "Rechnungsdatum eintragen"
+
+msgid "Set the invoice date"
+msgstr "Rechnungsdatum eintragen"
+
+msgid "show"
+msgstr "zeigen"
+
+msgid "Show:"
+msgstr "Zeige:"
+
+msgid "Show archived: on/off"
+msgstr "Archivierte zeigen: an/aus"
+
+msgid "Show broken projects"
+msgstr "Kaputte Projekte zeigen"
+
+msgid "show or hide archived projects in the list"
+msgstr "archivierte Projekte in der Liste zeigen oder ausblenden"
+
+msgid "Show projects of all years"
+msgstr "Projekte aller Jahre zeigen"
+
+msgid "Show projects of the selected year"
+msgstr "Projekte des gewählten Jahres zeigen"
+
+msgid "show the project folder in the file manager"
+msgstr "den Projektordner im Dateimanager zeigen"
+
+msgid "Show: year / all / broken"
+msgstr "Zeige: Jahr / alle / kaputt"
+
+msgid "sort"
+msgstr "sortieren"
+
+msgid "Sort"
+msgstr "Sortieren"
+
+msgid "Sort:"
+msgstr "Sortierung:"
+
+msgid "Start page"
+msgstr "Startseite"
+
+msgid "status, diff, history, commit, pull, push"
+msgstr "Status, Diff, Verlauf, Commit, Pull, Push"
+
+msgid "still empty: {} (Project details, p)"
+msgstr "noch leer: {} (Projektdaten, p)"
+
+msgid "switch tab"
+msgstr "Reiter wechseln"
+
+msgid "Take back"
+msgstr "Zurücknehmen"
+
+msgid "Take back: offer accepted"
+msgstr "Zurücknehmen: Angebot angenommen"
+
+msgid "Take back that the client accepted the offer for {}?"
+msgstr "Zurücknehmen, dass der Kunde das Angebot für {} angenommen hat?"
+
+msgid "that is not the name, type \"{}\" exactly"
+msgstr "das ist nicht der Name, genau \"{}\" eingeben"
+
+msgid "the archive folder"
+msgstr "der Archivordner"
+
+msgid "The changes to the offer of {} are not saved yet."
+msgstr "Die Änderungen am Angebot von {} sind noch nicht gespeichert."
+
+msgid "the date printed on the invoice"
+msgstr "das Datum, das auf der Rechnung steht"
+
+msgid "the day the client paid the invoice"
+msgstr "der Tag, an dem der Kunde die Rechnung bezahlt hat"
+
+msgid "the day the staff got their wages"
+msgstr "der Tag, an dem das Personal den Lohn bekommen hat"
+
+msgid "the defaults ({} does not exist)"
+msgstr "die Voreinstellungen ({} existiert nicht)"
+
+msgid "The file exists and is replaced."
+msgstr "Die Datei existiert und wird ersetzt."
+
+msgid "the file has none of the fields this form fills in; use Edit file"
+msgstr "die Datei hat keines der Felder dieses Formulars; Datei bearbeiten nutzen"
+
+msgid "The folder {} cannot be read as a project:"
+msgstr "Der Ordner {} lässt sich nicht als Projekt lesen:"
+
+msgid "the invoice number is already set ({})"
+msgstr "die Rechnungsnummer ist schon vergeben ({})"
+
+msgid "The Log tab has the details of the YAML error (line and column)."
+msgstr "Der Log-Tab zeigt den YAML-Fehler genau (Zeile und Spalte)."
+
+msgid "Then choose \"Try again\". The Log tab has the details."
+msgstr "Dann \"Erneut versuchen\" wählen. Der Log-Tab hat die Details."
+
+msgid "the next free invoice number of the year"
+msgstr "die nächste freie Rechnungsnummer des Jahres"
+
+msgid "The offer of {} has changes that are not saved yet."
+msgstr "Das Angebot von {} hat Änderungen, die noch nicht gespeichert sind."
+
+msgid "the project folder is a git repository"
+msgstr "der Projektordner ist ein git-Repository"
+
+msgid "the project folder is not a git repository"
+msgstr "der Projektordner ist kein git-Repository"
+
+msgid "the project is archived; move it back first (a)"
+msgstr "das Projekt ist archiviert; erst zurückholen (a)"
+
+msgid "The project page opens afterwards and shows what to do next."
+msgstr "Danach öffnet sich die Projektseite und zeigt den nächsten Schritt."
+
+msgid "there is no template in the templates folder"
+msgstr "im Ordner templates gibt es keine Vorlage"
+
+msgid "There is no .yml project file in the folder."
+msgstr "Im Ordner gibt es keine .yml-Projektdatei."
+
+msgid "The terminal is too small."
+msgstr "Das Terminal ist zu klein."
+
+msgid "the year shown on the dashboard and in the list"
+msgstr "das Jahr in der Übersicht und in der Liste"
+
+msgid "this asciii was built without document export"
+msgstr "dieses asciii wurde ohne Dokumentexport gebaut"
+
+msgid "this folder cannot be read as a project; Enter shows why"
+msgstr "dieser Ordner lässt sich nicht als Projekt lesen; Enter zeigt warum"
+
+msgid "this help"
+msgstr "diese Hilfe"
+
+msgid "This invoice shares numbers with other projects:"
+msgstr "Diese Rechnung teilt Nummern mit anderen Projekten:"
+
+msgid "To confirm, type the name: "
+msgstr "Zum Bestätigen den Namen eingeben: "
+
+msgid "Today's date is filled in; change it if needed."
+msgstr "Das heutige Datum ist eingetragen; bei Bedarf ändern."
+
+msgid "To-do ({}) · Enter opens"
+msgstr "Zu tun ({}) · Enter öffnet"
+
+msgid "try again"
+msgstr "erneut versuchen"
+
+msgid "Try again"
+msgstr "Erneut versuchen"
+
+msgid " type to search commands and projects"
+msgstr " tippen, um Befehle und Projekte zu suchen"
+
+msgid "(unknown)"
+msgstr "(unbekannt)"
+
+msgid "Unsaved changes"
+msgstr "Ungespeicherte Änderungen"
+
+msgid "usage"
+msgstr "Verbrauch"
+
+msgid "used"
+msgstr "verbraucht"
+
+msgid "Used as offered"
+msgstr "Wie angeboten verbraucht"
+
+msgid "Wages paid on"
+msgstr "Löhne bezahlt am"
+
+msgid "wages paid: set the date"
+msgstr "Löhne bezahlt: Datum eintragen"
+
+msgid "Wages paid: set the date"
+msgstr "Löhne bezahlt: Datum eintragen"
+
+msgid "Wage tax"
+msgstr "Lohnsteuer"
+
+msgid "wait for the catering"
+msgstr "auf das Catering warten"
+
+msgid "wait for the client"
+msgstr "auf den Kunden warten"
+
+msgid "wait for the money"
+msgstr "auf das Geld warten"
+
+msgid "Welcome to asciii"
+msgstr "Willkommen bei asciii"
+
+msgid "what can be done with this project; Enter runs the highlighted one"
+msgstr "was sich mit diesem Projekt machen lässt; Enter führt das Markierte aus"
+
+msgid "when the client says yes: Client accepted the offer (Shift+A)"
+msgstr "wenn der Kunde zusagt: Kunde hat das Angebot angenommen (Shift+A)"
+
+msgid "Why is it broken?"
+msgstr "Warum ist es kaputt?"
+
+msgid "with"
+msgstr "mit"
+
+msgid "with the mouse off, the terminal selects text as usual"
+msgstr "mit ausgeschalteter Maus markiert das Terminal Text wie gewohnt"
+
+msgid "Write all projects of {} to {}?"
+msgstr "Alle Projekte von {} nach {} schreiben?"
+
+msgid "write chosen"
+msgstr "Gewähltes schreiben"
+
+msgid "Write chosen to the template"
+msgstr "Gewähltes in die Vorlage schreiben"
+
+msgid "write the changes into the project file"
+msgstr "die Änderungen in die Projektdatei schreiben"
+
+msgid "write the invoice as PDF into the output folder"
+msgstr "die Rechnung als PDF in den Ausgabeordner schreiben"
+
+msgid "write the offer as PDF into the output folder"
+msgstr "das Angebot als PDF in den Ausgabeordner schreiben"
+
+msgid "year"
+msgstr "Jahr"
+
+msgid "Yes, accepted"
+msgstr "Ja, angenommen"
+
+msgid "on the project page: open a project first"
+msgstr "auf der Projektseite: erst ein Projekt öffnen"
+
+msgid "Invoiced"
+msgstr "Abgerechnet"
+
+msgid "Not invoiced"
+msgstr "Nicht abgerechnet"
+
+msgid "Expected"
+msgstr "Erwartet"
+
+msgid "{:.1} h service"
+msgstr "{:.1} h Service"
+
+msgid "{} already over"
+msgstr "{} schon vorbei"
+
+msgid "Expected {}:"
+msgstr "Erwartet {}:"
+
+msgid "{} invoices"
+msgstr "{} Rechnungen"
+
+msgid "\"{}\" is not a known title; start with one of: {}"
+msgstr "\"{}\" ist keine bekannte Anrede; beginne mit einer von: {}"
+
+msgid "Not yet invoiced"
+msgstr "Noch nicht abgerechnet"
+
+msgid "{} overdue"
+msgstr "{} überfällig"
+
+msgid "{} paid"
+msgstr "{} bezahlt"
+
+msgid "paid"
+msgstr "bezahlt"
+
+msgid "{} projects"
+msgstr "{} Projekte"
+
+msgid "starts with {}; the salutation comes from it"
+msgstr "beginnt mit {}; daraus ergibt sich die Anrede"
+
+msgid "the configuration has no salutation for \"{}\" (lang_addressing)"
+msgstr "die Konfiguration hat keine Anrede für \"{}\" (lang_addressing)"
+
+msgid "Usage"
+msgstr "Verbrauch"
+
+msgid "Agreed"
+msgstr "Zusage"
+
+msgid "Wages (costs)"
+msgstr "Löhne (Kosten)"
+
+msgid "Waiting for payment"
+msgstr "Warten auf Zahlung"
+
+msgid "not paid yet"
+msgstr "noch offen"
+
+msgid "1 invoice"
+msgstr "1 Rechnung"
+
+msgid "1 project"
+msgstr "1 Projekt"
+
+
+msgid "Add \"cataloge:\" with Edit the template file (Shift+E), then the products can be edited here."
+msgstr "Füge mit „Vorlagendatei bearbeiten“ (Shift+E) \"cataloge:\" hinzu, dann lassen sich die Produkte hier bearbeiten."
+
+msgid "a new product in the catalog of the template"
+msgstr "ein neues Produkt im Katalog der Vorlage"
+
+msgid "change name, unit, price and starting quantity"
+msgstr "Name, Einheit, Preis und Startmenge ändern"
+
+msgid "choose the template to edit, when there are several"
+msgstr "die zu bearbeitende Vorlage wählen, wenn es mehrere gibt"
+
+msgid "Clear the usage numbers"
+msgstr "Verbrauchszahlen löschen"
+
+msgid "clear usage"
+msgstr "Verbrauch löschen"
+
+msgid "{} could not be read back after saving"
+msgstr "{} ließ sich nach dem Speichern nicht zurücklesen"
+
+msgid "Create the default template"
+msgstr "Standardvorlage anlegen"
+
+msgid "default"
+msgstr "Standard"
+
+msgid "Edit the template (catalog and starting offer)"
+msgstr "Vorlage bearbeiten (Katalog und Startangebot)"
+
+msgid "Edit the template file"
+msgstr "Vorlagendatei bearbeiten"
+
+msgid "Esc clears the search."
+msgstr "Esc leert die Suche."
+
+msgid "Existing projects keep their own catalog."
+msgstr "Bestehende Projekte behalten ihren eigenen Katalog."
+
+msgid "filter the catalog by name"
+msgstr "den Katalog nach Namen filtern"
+
+msgid "how many a new project offers; empty or 0: not in the starting offer"
+msgstr "wie viel ein neues Projekt anbietet; leer oder 0: nicht im Startangebot"
+
+msgid "how many of the highlighted product new projects offer"
+msgstr "wie viel vom markierten Produkt neue Projekte anbieten"
+
+msgid "{} is no longer in the starting offer"
+msgstr "{} ist nicht mehr im Startangebot"
+
+msgid "It is in the starting offer too and is removed there as well."
+msgstr "Es ist auch im Startangebot und wird dort ebenfalls entfernt."
+
+msgid "it is not in the starting offer"
+msgstr "es ist nicht im Startangebot"
+
+msgid "it starts without sold or returned numbers"
+msgstr "es startet ohne Verbrauchs- oder Rückgabezahlen"
+
+msgid "it starts with {} returned, clear that first (u) or keep at least {}"
+msgstr "es startet mit {} zurückgegeben; erst löschen (u) oder mindestens {} behalten"
+
+msgid "n adds a product."
+msgstr "n fügt ein Produkt hinzu."
+
+msgid "n adds the first product; the catalog is started for it."
+msgstr "n fügt das erste Produkt hinzu; der Katalog wird dafür angelegt."
+
+msgid "New projects are made from a template: its catalog and starting offer."
+msgstr "Neue Projekte entstehen aus einer Vorlage: mit ihrem Katalog und Startangebot."
+
+msgid "new projects could not be read with this template ({}), nothing saved"
+msgstr "neue Projekte wären mit dieser Vorlage nicht lesbar ({}), nichts gespeichert"
+
+msgid "new projects start without sold or returned numbers for the highlighted product"
+msgstr "neue Projekte starten ohne Verbrauchs- oder Rückgabezahlen für das markierte Produkt"
+
+msgid "New projects start with this. Existing projects keep their own catalog."
+msgstr "Neue Projekte starten damit. Bestehende Projekte behalten ihren eigenen Katalog."
+
+msgid "Next template"
+msgstr "Nächste Vorlage"
+
+msgid "No product matches the search."
+msgstr "Kein Produkt passt zur Suche."
+
+msgid "not in the catalog"
+msgstr "nicht im Katalog"
+
+msgid "{} of {}, ←/→ chooses"
+msgstr "{} von {}, ←/→ wählt"
+
+msgid "One less in the starting offer"
+msgstr "Eins weniger im Startangebot"
+
+msgid "One more in the starting offer"
+msgstr "Eins mehr im Startangebot"
+
+msgid "open the template file in your editor"
+msgstr "die Vorlagendatei im Editor öffnen"
+
+msgid "Previous template"
+msgstr "Vorherige Vorlage"
+
+msgid "{} products in the catalog · {} in the starting offer, {} before tax"
+msgstr "{} Produkte im Katalog · {} im Startangebot, {} netto"
+
+msgid "{} products in the catalog · no starting offer (the template has no products section)"
+msgstr "{} Produkte im Katalog · kein Startangebot (die Vorlage hat keinen products-Abschnitt)"
+
+msgid "quits on the tabs; on the project page and in the editor it goes back"
+msgstr "beendet auf den Reitern; auf der Projektseite und im Editor geht es zurück"
+
+msgid "Read the template again"
+msgstr "Vorlage neu einlesen"
+
+msgid "read the template from disk again"
+msgstr "die Vorlage erneut von der Festplatte lesen"
+
+msgid "Remove"
+msgstr "Entfernen"
+
+msgid "{} removed, also from the starting offer (not saved yet)"
+msgstr "{} entfernt, auch aus dem Startangebot (noch nicht gespeichert)"
+
+msgid "Remove {} from the catalog of the template?"
+msgstr "{} aus dem Katalog der Vorlage entfernen?"
+
+msgid "Remove {} from the starting offer?"
+msgstr "{} aus dem Startangebot entfernen?"
+
+msgid "Remove product"
+msgstr "Produkt entfernen"
+
+msgid "remove the product from the template (asks first)"
+msgstr "das Produkt aus der Vorlage entfernen (fragt vorher)"
+
+msgid "save or discard the changes first (s, or Esc)"
+msgstr "erst die Änderungen speichern oder verwerfen (s oder Esc)"
+
+msgid "Save the template"
+msgstr "Vorlage speichern"
+
+msgid "starting offer"
+msgstr "Startangebot"
+
+msgid "Starting offer"
+msgstr "Startangebot"
+
+msgid "starts with {} returned"
+msgstr "startet mit {} zurück"
+
+msgid "starts with usage {}"
+msgstr "startet mit Verbrauch {}"
+
+msgid "switch between dashboard, projects, template and log"
+msgstr "zwischen Übersicht, Projekten, Vorlage und Log wechseln"
+
+msgid "template"
+msgstr "Vorlage"
+
+msgid "Template · {}"
+msgstr "Vorlage · {}"
+
+msgid "Template:"
+msgstr "Vorlage:"
+
+msgid "template {} saved: 1 product changed"
+msgstr "Vorlage {} gespeichert: 1 Produkt geändert"
+
+msgid "template {} saved: {} products changed"
+msgstr "Vorlage {} gespeichert: {} Produkte geändert"
+
+msgid "the catalog has {} already"
+msgstr "der Katalog hat {} schon"
+
+msgid "The catalog of this template is empty."
+msgstr "Der Katalog dieser Vorlage ist leer."
+
+msgid "The changes to the template {} are not saved yet."
+msgstr "Die Änderungen an der Vorlage {} sind noch nicht gespeichert."
+
+msgid "the change would break the template file, nothing saved"
+msgstr "die Änderung würde die Vorlagendatei beschädigen, nichts gespeichert"
+
+msgid "the project folder could not be opened: {}"
+msgstr "der Projektordner ließ sich nicht öffnen: {}"
+
+msgid "There is no template in the folder \"{}\" yet."
+msgstr "Im Ordner \"{}\" gibt es noch keine Vorlage."
+
+msgid "there is no template to edit"
+msgstr "es gibt keine Vorlage zum Bearbeiten"
+
+msgid "the template cannot be read: {:#}"
+msgstr "die Vorlage ist nicht lesbar: {:#}"
+
+msgid "The template cannot be shown."
+msgstr "Die Vorlage kann nicht angezeigt werden."
+
+msgid "the template could not be written safely, nothing saved"
+msgstr "die Vorlage ließ sich nicht sicher schreiben, nichts gespeichert"
+
+msgid "the template has no catalog section; add \"cataloge:\" with Edit the template file (Shift+E)"
+msgstr "die Vorlage hat keinen Katalog-Abschnitt; \"cataloge:\" mit „Vorlagendatei bearbeiten“ (Shift+E) hinzufügen"
+
+msgid "the template has no products section for a starting offer; add \"products:\" in the editor"
+msgstr "die Vorlage hat keinen products-Abschnitt für ein Startangebot; \"products:\" im Editor hinzufügen"
+
+msgid "the template has no products section, so no starting offer"
+msgstr "die Vorlage hat keinen products-Abschnitt, also kein Startangebot"
+
+msgid "This template has no catalog yet."
+msgstr "Diese Vorlage hat noch keinen Katalog."
+
+msgid "usage cleared (not saved yet)"
+msgstr "Verbrauch gelöscht (noch nicht gespeichert)"
+
+msgid "{} was changed by someone else while editing, nothing saved; Esc → Discard reads it again"
+msgstr "{} wurde während der Bearbeitung anderswo geändert, nichts gespeichert; Esc → Verwerfen liest sie neu"
+
+msgid "write the changes into the template file"
+msgstr "die Änderungen in die Vorlagendatei schreiben"
+
+msgid "Mon"
+msgstr "Mo"
+
+msgid "Tue"
+msgstr "Di"
+
+msgid "Wed"
+msgstr "Mi"
+
+msgid "Thu"
+msgstr "Do"
+
+msgid "Fri"
+msgstr "Fr"
+
+msgid "Sat"
+msgstr "Sa"
+
+msgid "Sun"
+msgstr "So"
+
+msgid "next step: {}"
+msgstr "nächster Schritt: {}"

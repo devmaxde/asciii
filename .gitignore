@@ -19,6 +19,7 @@ tests/caterings
 *.aux
 *.ymlx
 *.json
+tmp
 pkg
 .direnv
 .envrc

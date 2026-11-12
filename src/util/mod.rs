@@ -10,16 +10,20 @@ use std::{
 use bill::Currency;
 use chrono::NaiveTime;
 
-use self::dirs::home_dir;
+use ::dirs::home_dir;
 use anyhow::{Context, Error};
 
-pub mod dirs;
 pub mod yaml;
 
 /// Sets up logging initially.
 ///
 /// After calling this function the global logger will look for the environment variable `ASCIII_LOG`.
 pub fn setup_log() {
+    log_builder().init();
+}
+
+/// The logger configuration used by [`setup_log`], for callers that want to wrap the logger.
+pub fn log_builder() -> env_logger::Builder {
     let log_var = "ASCIII_LOG";
     let mut logger = env_logger::Builder::from_env(log_var);
 
@@ -30,7 +34,7 @@ pub fn setup_log() {
             .filter_level(log::LevelFilter::Info);
     }
 
-    logger.init();
+    logger
 }
 
 /// Freezes the program until for inspection
@@ -146,13 +150,7 @@ where
 pub fn get_valid_path<T: AsRef<OsStr>>(p: T) -> Option<PathBuf> {
     let path = replace_home_tilde(Path::new(&p));
     let path = if path.is_relative() {
-        if cfg!(target_arch = "wasm32") {
-            Ok(PathBuf::from(std::env::var("PWD").expect("can't access $PWD")))
-        } else {
-            current_dir()
-        }
-        .unwrap()
-        .join(path)
+        current_dir().unwrap().join(path)
     } else {
         path
     };
@@ -193,10 +191,7 @@ pub fn to_local_file(file: &Path, ext: &str) -> PathBuf {
 
 /// Creates a `chrono::NaiveTime` from a string that looks like `23:59:58` or only `12:05`.
 pub fn naive_time_from_str(string: &str) -> Option<NaiveTime> {
-    let t: Vec<u32> = string
-        .splitn(2, |p| p == '.' || p == ':')
-        .map(|s| s.parse().unwrap_or(0))
-        .collect();
+    let t: Vec<u32> = string.splitn(2, ['.', ':']).map(|s| s.parse().unwrap_or(0)).collect();
 
     if let (Some(h), m) = (t.first(), t.get(1).unwrap_or(&0)) {
         if *h < 24 && *m < 60 {

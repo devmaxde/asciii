@@ -20,9 +20,6 @@ use std::{
     path::{Path, PathBuf},
 };
 
-#[cfg(target_arch = "wasm32")]
-use crate::util::dirs::home_dir;
-#[cfg(not(target_arch = "wasm32"))]
 use dirs::home_dir;
 
 use crate::util::yaml::{self, Yaml};
@@ -79,7 +76,7 @@ impl ConfigReader {
     }
 
     fn envify_path(path: &str) -> String {
-        path.split(|c| c == '/' || c == '.')
+        path.split(['/', '.'])
             .map(str::to_uppercase)
             .fold(String::from("ASCIII"), |mut acc, w| {
                 acc.push('_');

@@ -19,9 +19,6 @@
 //! ```
 //!
 
-#[cfg(target_arch = "wasm32")]
-use crate::util::dirs::home_dir;
-#[cfg(not(target_arch = "wasm32"))]
 use dirs::home_dir;
 #[cfg(feature = "rayon")]
 use rayon::prelude::*;
@@ -141,7 +138,7 @@ impl Default for StorageSelection {
 
 fn is_dot_file(path: &Path) -> bool {
     path.file_name()
-        .and_then(std::ffi::OsStr::to_str)
+        .and_then(OsStr::to_str)
         .and_then(|s| s.chars().next())
         .map(|c| c == '.')
         .unwrap_or(false)
@@ -626,7 +623,7 @@ impl<L: Storable> Storage<L> {
 
         let mut moved_files = Vec::new();
         for project in projects {
-            println!("unarchiving {:?}", project.short_desc());
+            log::info!("unarchiving {:?}", project.short_desc());
             let unarchive_target = self.unarchive_project(&project).unwrap();
             moved_files.push(project.dir());
             moved_files.push(unarchive_target);
@@ -659,7 +656,7 @@ impl<L: Storable> Storage<L> {
             .parent()
             .and_then(Path::file_stem)
             .and_then(OsStr::to_str)
-            .map_or(false, |s| s.parse::<i32>().is_ok());
+            .is_some_and(|s| s.parse::<i32>().is_ok());
 
         let name = self.get_project_name(archived_dir)?;
         let target = self.working_dir().join(name);
@@ -686,10 +683,7 @@ impl<L: Storable> Storage<L> {
     pub fn search_projects(&self, directory: StorageDir, search_term: &str) -> Result<ProjectList<L>, Error> {
         log::trace!("searching for projects by {:?} in {:?}", search_term, directory);
         let search_index = if search_term.starts_with('N') {
-            match search_term.chars().skip(1).collect::<String>().parse::<usize>() {
-                Ok(n) => Some(n),
-                Err(_) => None,
-            }
+            search_term.chars().skip(1).collect::<String>().parse::<usize>().ok()
         } else {
             None
         };
@@ -703,8 +697,7 @@ impl<L: Storable> Storage<L> {
             .into_iter()
             .enumerate()
             .filter(|(index, project)| {
-                search_index.map_or(false, |idx| idx == index + 1)
-                    || project.matches_search(&search_term.to_lowercase())
+                search_index.is_some_and(|idx| idx == index + 1) || project.matches_search(&search_term.to_lowercase())
             })
             .map(|(_, project)| project)
             .collect();

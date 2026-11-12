@@ -4,13 +4,13 @@ use super::subcommands;
 use anyhow::{format_err, Error};
 use clap::{Arg, ArgAction, ArgGroup, ArgMatches, Command};
 
-use super::ArgMatchesExt as _;
+use super::ArgMatchesExt;
 use clap_complete::Shell;
 
 #[allow(clippy::cognitive_complexity)]
 #[rustfmt::skip]
 pub fn with_cli<F> (app_handler:F) where F: Fn(Command) {
-    app_handler(
+    let app =
         Command::new("asciii")
             .author(clap::crate_authors!())
             .version(*asciii::VERSION)
@@ -23,8 +23,7 @@ pub fn with_cli<F> (app_handler:F) where F: Fn(Command) {
                  .help(lformat!("Print errors with full backtrace"))
                  .long("debug")
                  .short('d')
-                 .action(ArgAction::SetTrue)
-                 )
+                             .action(ArgAction::SetTrue))
 
             .subcommand(Command::new("bootstrap")
                         .aliases(["boot", "clone"])
@@ -36,10 +35,12 @@ pub fn with_cli<F> (app_handler:F) where F: Fn(Command) {
                         .arg(Arg::new("to")
                              .help(lformat!("where to clone to"))
                              .long("to")
+                             
                              .required(false))
                         .arg(Arg::new("editor")
                              .help(lformat!("Override the configured editor"))
                              .long("editor")
+                             
                              .short('e'))
 
                        )
@@ -56,38 +57,46 @@ pub fn with_cli<F> (app_handler:F) where F: Fn(Command) {
                              .help(lformat!("Manually set the date of the project"))
                              .value_parser(validators::is_dmy)
                              .short('d')
-                             .long("date"))
+                             .long("date")
+                             )
 
                         .arg(Arg::new("description")
                              .help(lformat!("Override the description of the project"))
-                             .long("desc"))
+                             .long("desc")
+                             )
 
                         .arg(Arg::new("template")
                              .help(lformat!("Use a specific template"))
                              .long("template")
+                             
                              .short('t'))
 
                         .arg(Arg::new("editor")
                              .help(lformat!("Override the configured editor"))
                              .long("editor")
+                             
                              .short('e'))
 
                         .arg(Arg::new("manager")
                              .help(lformat!("Override the manager of the project"))
                              .long("manager")
-                             .short('m'))
+                             .short('m')
+                             )
 
                         .arg(Arg::new("time")
                              .help(lformat!("Manually set the start time of the project"))
-                             .long("time"))
+                             .long("time")
+                             )
 
                         .arg(Arg::new("time_end")
                              .help(lformat!("Manually set the end time of the project"))
-                             .long("time_end"))
+                             .long("time_end")
+                             )
 
                         .arg(Arg::new("length")
                              .help(lformat!("Overrides the duration of the event"))
-                             .long("length"))
+                             .long("length")
+                             )
 
                         .arg(Arg::new("don't edit")
                              .help(lformat!("Do not edit the file after creation"))
@@ -105,6 +114,7 @@ pub fn with_cli<F> (app_handler:F) where F: Fn(Command) {
                              .short('a')
                              .long("archive")
                              .num_args(0..=1)
+                             
                              .value_name("year")
                             )
 
@@ -113,64 +123,62 @@ pub fn with_cli<F> (app_handler:F) where F: Fn(Command) {
                              .short('y')
                              .long("year")
                              .num_args(0..=1)
+                             
                             )
 
                         .arg(Arg::new("details")
                              .help(lformat!("Add extra fields to print for each project listed"))
                              .short('d')
                              .long("details")
+                             
                              .num_args(1..).action(ArgAction::Append)
                             )
                         .arg(Arg::new("filter")
                              .help(lformat!("Filter selection by field content"))
                              .short('f')
                              .long("filter")
+                             
                              .num_args(1..).action(ArgAction::Append)
                             )
                         .arg(Arg::new("errors")
                              .help(lformat!("Show Errors for each project"))
                              .long("errors")
                              .short('e')
-                             .action(ArgAction::SetTrue)
-                            )
+                             .action(ArgAction::SetTrue))
                         .arg(Arg::new("colors")
                              .help(lformat!("Show colors"))
                              .long("colors")
                              .short('c')
-                             .action(ArgAction::SetTrue)
-                            )
+                             .action(ArgAction::SetTrue))
                         .arg(Arg::new("no-colors")
                              .help(lformat!("Show colors for each project"))
                              .long("no-colors")
                              .short('n')
                              .conflicts_with("colors")
-                             .action(ArgAction::SetTrue)
-                            )
+                             .action(ArgAction::SetTrue))
                         .arg(Arg::new("simple")
                              .help(lformat!("Show non-verbose list"))
                              .long("simple")
-                             .action(ArgAction::SetTrue)
-                            )
+                             .action(ArgAction::SetTrue))
                         .arg(Arg::new("csv")
                              .help(lformat!("Print in csv form"))
                              .long("csv")
                              .conflicts_with("simple")
                              .conflicts_with("verbose")
-                             .action(ArgAction::SetTrue)
-                            )
+                             .action(ArgAction::SetTrue))
                         .arg(Arg::new("verbose")
                              .help(lformat!("Opposite of simple"))
                              .long("verbose")
                              .short('v')
                              .conflicts_with("simple")
                              .conflicts_with("csv")
-                             .action(ArgAction::SetTrue)
-                            )
+                             .action(ArgAction::SetTrue))
                         .arg(Arg::new("sort")
                              .help(lformat!("Sort by :"))
                              .long("sort")
                              .short('s')
                              .value_parser(["date",  "index",  "name",  "manager"])
+                             
                             )
                         .arg(Arg::new("all")
                              .help(lformat!("List all projects, ever"))
@@ -182,8 +190,7 @@ pub fn with_cli<F> (app_handler:F) where F: Fn(Command) {
                              .help(lformat!("List templates"))
                              .long("templates")
                              .short('t')
-                             .action(ArgAction::SetTrue)
-                            )
+                             .action(ArgAction::SetTrue))
 
                         .arg(Arg::new("years")
                              .help(lformat!("List years in archive"))
@@ -194,29 +201,25 @@ pub fn with_cli<F> (app_handler:F) where F: Fn(Command) {
                              .help(lformat!("List paths to each project file"))
                              .long("paths")
                              .short('p')
-                             .action(ArgAction::SetTrue)
-                            )
+                             .action(ArgAction::SetTrue))
 
                         .arg(Arg::new("broken")
                              .help(lformat!("List broken projects  without project file"))
                              .long("broken")
                              .short('b')
-                             .action(ArgAction::SetTrue)
-                            )
+                             .action(ArgAction::SetTrue))
 
                         .arg(Arg::new("computed_fields")
                              .help(lformat!("List all computed data fields that can be used with --details"))
                              .long("computed")
                              .short('C')
-                             .action(ArgAction::SetTrue)
-                            )
+                             .action(ArgAction::SetTrue))
 
                         .arg(Arg::new("nothing")
                              .help(lformat!("Print nothing, expect the fields supplied via --details"))
                              .long("nothing")
                              .short('x')
-                             .action(ArgAction::SetTrue)
-                            )
+                             .action(ArgAction::SetTrue))
                         )
 
             .subcommand(Command::new("open")
@@ -236,35 +239,30 @@ pub fn with_cli<F> (app_handler:F) where F: Fn(Command) {
                              .help(lformat!("Open path to templates instead"))
                              .long("templates")
                              .short('t')
-                             .action(ArgAction::SetTrue)
-                            )
+                             .action(ArgAction::SetTrue))
 
                         .arg(Arg::new("output")
                              .help(lformat!("Open path to created documents instead"))
                              .long("output")
                              .short('o')
-                             .action(ArgAction::SetTrue)
-                            )
+                             .action(ArgAction::SetTrue))
 
                         .arg(Arg::new("bin")
                              .help(lformat!("Open path to current binary instead"))
                              .long("bin")
                              .short('b')
-                             .action(ArgAction::SetTrue)
-                            )
+                             .action(ArgAction::SetTrue))
 
                         .arg(Arg::new("invoice")
                              .help(lformat!("Open invoice file"))
                              .long("invoice")
                              .short('i')
-                             .action(ArgAction::SetTrue)
-                            )
+                             .action(ArgAction::SetTrue))
 
                         .arg(Arg::new("offer")
                              .help(lformat!("Open offer file"))
                              .long("offer")
-                             .action(ArgAction::SetTrue)
-                            )
+                             .action(ArgAction::SetTrue))
                         )
                         //# TODO: add --invoice and --offer
 
@@ -281,19 +279,20 @@ pub fn with_cli<F> (app_handler:F) where F: Fn(Command) {
                              .help(lformat!("Pick an archived project"))
                              .short('a')
                              .long("archive")
+                             
                             )
 
                         .arg(Arg::new("template")
                              .help(lformat!("Edit a template file, use `list --templates` to learn which."))
                              .short('t')
                              .long("template")
-                             .action(ArgAction::SetTrue)
-                            )
+                             .action(ArgAction::SetTrue))
 
                         .arg(Arg::new("editor")
                              .help(lformat!("Override the configured editor"))
                              .short('e')
                              .long("editor")
+                             
                             )
                         )
 
@@ -307,13 +306,13 @@ pub fn with_cli<F> (app_handler:F) where F: Fn(Command) {
                              .help(lformat!("Edit a template file, use `list --templates` to learn which."))
                              .short('t')
                              .long("template")
-                             .action(ArgAction::SetTrue)
-                            )
+                             .action(ArgAction::SetTrue))
 
                         .arg(Arg::new("editor")
                              .help(lformat!("Override the configured editor"))
                              .short('e')
                              .long("editor")
+                             
                             )
                         )
                 .subcommand(Command::new("store"))
@@ -333,20 +332,19 @@ pub fn with_cli<F> (app_handler:F) where F: Fn(Command) {
                              .help(lformat!("Archives the project, even though it is not completely valid"))
                              .long("force")
                              .short('F')
-                             .action(ArgAction::SetTrue)
-                            )
+                             .action(ArgAction::SetTrue))
 
                         .arg(Arg::new("all")
                              .help(lformat!("Archives all projects that can be archived"))
                              .long("all")
                              .short('a')
-                             .action(ArgAction::SetTrue)
-                            )
+                             .action(ArgAction::SetTrue))
 
                         .arg(Arg::new("year")
                              .help(lformat!("Override the year"))
                              .long("year")
                              .short('y')
+                             
                             )
                        )
 
@@ -393,35 +391,34 @@ pub fn with_cli<F> (app_handler:F) where F: Fn(Command) {
                              .help(lformat!("Shows a particular detail"))
                              .long("detail")
                              .short('d')
+                             
                              )
 
                         .arg(Arg::new("archive")
                              .help(lformat!("Pick an archived project"))
                              .long("archive")
-                             .short('a')
                              .num_args(0..=1)
+                             .short('a')
+                             
                             )
 
                         .arg(Arg::new("empty fields")
                              .help(lformat!("Shows fields that can be filled automatically"))
                              .long("empty_fields")
                              .short('f')
-                             .action(ArgAction::SetTrue)
-                            )
+                             .action(ArgAction::SetTrue))
 
                         .arg(Arg::new("errors")
                              .help(lformat!("Shows the errors in this project"))
                              .long("errors")
                              .short('e')
-                             .action(ArgAction::SetTrue)
-                            )
+                             .action(ArgAction::SetTrue))
 
                         .arg(Arg::new("template")
                              .help(lformat!("Show fields in templates that are filled"))
                              .long("template")
                              .short('t')
-                             .action(ArgAction::SetTrue)
-                            )
+                             .action(ArgAction::SetTrue))
                         //#conflicts_with: archive  # this causes a crash
 
                         .arg(Arg::new("files")
@@ -433,15 +430,13 @@ pub fn with_cli<F> (app_handler:F) where F: Fn(Command) {
                              .help(lformat!("Display values in invoice mode"))
                              .long("invoice")
                              .short('i')
-                             .action(ArgAction::SetTrue)
-                            )
+                             .action(ArgAction::SetTrue))
 
                         .arg(Arg::new("offer")
                              .help(lformat!("Display values in offer mode"))
                              .long("offer")
                              .short('o')
-                             .action(ArgAction::SetTrue)
-                            )
+                             .action(ArgAction::SetTrue))
 
                         //.arg(Arg::new("hours") //# what used to be --caterers
                         //     .help(lformat!("Display hours"))
@@ -452,8 +447,7 @@ pub fn with_cli<F> (app_handler:F) where F: Fn(Command) {
                              .help(lformat!("Show as csv"))
                              .long("csv")
                              .short('c')
-                             .action(ArgAction::SetTrue)
-                            )
+                             .action(ArgAction::SetTrue))
 
                         //.arg(Arg::new("markdown")
                         //     .help(lformat!("Show as markdown"))
@@ -462,7 +456,6 @@ pub fn with_cli<F> (app_handler:F) where F: Fn(Command) {
                         //    )
                     )
 
-            // NOTE: no `ed` alias here, `edit` already claims it
             .subcommand(Command::new("set")
                         .about(lformat!("Set a value in a project file"))
                         .arg(Arg::new("search_term")
@@ -484,6 +477,7 @@ pub fn with_cli<F> (app_handler:F) where F: Fn(Command) {
                              .short('a')
                              .long("archive")
                              .num_args(0..=1)
+                             
                             )
                         )
 
@@ -499,6 +493,7 @@ pub fn with_cli<F> (app_handler:F) where F: Fn(Command) {
                              .short('a')
                              .long("archive")
                              .num_args(0..=1)
+                             
                             )
                         )
 
@@ -518,33 +513,28 @@ pub fn with_cli<F> (app_handler:F) where F: Fn(Command) {
                              .help(lformat!("Shows templates path instead"))
                              .long("templates")
                              .short('t')
-                             .action(ArgAction::SetTrue)
-                            )
+                             .action(ArgAction::SetTrue))
                         .arg(Arg::new("output")
                              .help(lformat!("Shows path to created documents instead"))
                              .long("output")
                              .short('o')
-                             .action(ArgAction::SetTrue)
-                            )
+                             .action(ArgAction::SetTrue))
                         .arg(Arg::new("bin")
                              .help(lformat!("Open path to current binary instead"))
                              .long("bin")
                              .short('b')
-                             .action(ArgAction::SetTrue)
-                            )
+                             .action(ArgAction::SetTrue))
 
                         .arg(Arg::new("invoice")
                              .help(lformat!("Open invoice file"))
                              .long("invoice")
                              .short('i')
-                             .action(ArgAction::SetTrue)
-                            )
+                             .action(ArgAction::SetTrue))
 
                         .arg(Arg::new("offer")
                              .help(lformat!("Open offer file"))
                              .long("offer")
-                             .action(ArgAction::SetTrue)
-                            )
+                             .action(ArgAction::SetTrue))
                         )
 
             .subcommand(Command::new("workspace")
@@ -553,12 +543,14 @@ pub fn with_cli<F> (app_handler:F) where F: Fn(Command) {
                              .help(lformat!("Open an archive instead"))
                              .short('a')
                              .long("archive")
+                             
                             )
 
                         .arg(Arg::new("editor")
                              .help(lformat!("Override the configured editor"))
                              .short('e')
                              .long("editor")
+                             
                             )
                         .about(lformat!("Open the working directory in an editor"))
                         )
@@ -571,7 +563,8 @@ pub fn with_cli<F> (app_handler:F) where F: Fn(Command) {
                              .help(lformat!("List projects from that year, archived or not"))
                              //.short('y')
                              //.long("year")
-                             .value_parser(validators::is_year)
+                             .value_parser(|y: &str| y.parse::<i32>().map(|_ok| y.to_owned()).map_err(|e| e.to_string()))
+                             
                             )
                         )
 
@@ -582,6 +575,7 @@ pub fn with_cli<F> (app_handler:F) where F: Fn(Command) {
                              .short('a')
                              .long("archive")
                              .num_args(0..=1)
+                             
                              .value_name("year")
                             )
 
@@ -589,14 +583,14 @@ pub fn with_cli<F> (app_handler:F) where F: Fn(Command) {
                              .help(lformat!("Include open tasks"))
                              .short('t')
                              .long("tasks")
-                             .action(ArgAction::SetTrue)
-                            )
+                             .action(ArgAction::SetTrue))
 
                         .arg(Arg::new("year")
                              .help(lformat!("List projects from that year, archived or not"))
                              .short('y')
                              .long("year")
                              .num_args(0..=1)
+                             
                             )
 
                         .arg(Arg::new("all")
@@ -613,16 +607,14 @@ pub fn with_cli<F> (app_handler:F) where F: Fn(Command) {
                              .help(lformat!("Show unpayed wages"))
                              .long("invoices")
                              .short('i')
-                             .action(ArgAction::SetTrue)
-                            )
+                             .action(ArgAction::SetTrue))
 
                         .arg(Arg::new("wages")
                              .help(lformat!("Show unpayed wages"))
                              .long("wages")
                              .short('w')
                              .conflicts_with("invoices")
-                             .action(ArgAction::SetTrue)
-                            )
+                             .action(ArgAction::SetTrue))
                        )
 
             .subcommand(Command::new("make")
@@ -632,43 +624,40 @@ pub fn with_cli<F> (app_handler:F) where F: Fn(Command) {
                         .arg(Arg::new("file")
                              .help(lformat!("Manually pass a file path"))
                              .long("file")
+                             
                             )
 
                         .arg(Arg::new("output")
                              .help(lformat!("Manually pass a output folder"))
                              .long("output")
+                             
                             )
 
                         .arg(Arg::new("force")
                              .help(lformat!("Do it against better judgement"))
                              .long("force")
-                             .action(ArgAction::SetTrue)
-                            )
+                             .action(ArgAction::SetTrue))
 
                         .arg(Arg::new("pdf-only")
                              .help(lformat!("Only create the PDF file"))
                              .long("pdf")
-                             .action(ArgAction::SetTrue)
-                            )
+                             .action(ArgAction::SetTrue))
 
                         .arg(Arg::new("dry-run")
                              .help(lformat!("Do not create final output file"))
                              .short('d')
                              .long("dry")
-                             .action(ArgAction::SetTrue)
-                            )
+                             .action(ArgAction::SetTrue))
 
                         .arg(Arg::new("print-only")
                              .help(lformat!("Only prints to stdout"))
                              .long("print")
-                             .action(ArgAction::SetTrue)
-                            )
+                             .action(ArgAction::SetTrue))
 
                         .arg(Arg::new("open")
                              .help(lformat!("Open the pdf file afterwards."))
                              .long("open")
-                             .action(ArgAction::SetTrue)
-                            )
+                             .action(ArgAction::SetTrue))
 
                         .arg(Arg::new("search_term")
                              .help(lformat!("Search term, possibly event name"))
@@ -679,26 +668,26 @@ pub fn with_cli<F> (app_handler:F) where F: Fn(Command) {
                              .help(lformat!("Produce an offer document"))
                              .long("offer")
                              .conflicts_with("invoice")
-                             .action(ArgAction::SetTrue)
-                             )
+                             .action(ArgAction::SetTrue))
 
                         .arg(Arg::new("invoice")
                              .help(lformat!("Produce an invoice document"))
                              .long("invoice")
-                             .action(ArgAction::SetTrue)
-                             )
+                             .action(ArgAction::SetTrue))
 
                         .arg(Arg::new("archive")
                              .help(lformat!("Pick an archived project"))
                              .short('a')
                              .long("archive")
                              .num_args(0..=1)
+                             
                             )
 
                         .arg(Arg::new("template")
                              .help(lformat!("Use a particular template"))
                              .short('t')
                              .long("template")
+                             
                              )
                        )
 
@@ -710,8 +699,7 @@ pub fn with_cli<F> (app_handler:F) where F: Fn(Command) {
                              .help(lformat!("Do not create final output file"))
                              .short('d')
                              .long("dry")
-                             .action(ArgAction::SetTrue)
-                            )
+                             .action(ArgAction::SetTrue))
 
                         .arg(Arg::new("search_term")
                              .help(lformat!("Search term, possibly event name"))
@@ -723,6 +711,7 @@ pub fn with_cli<F> (app_handler:F) where F: Fn(Command) {
                              .short('a')
                              .long("archive")
                              .num_args(0..=1)
+                             
                             )
                         //.arg(Arg::new("template")
                         //     .help(lformat!("A template"))
@@ -739,45 +728,44 @@ pub fn with_cli<F> (app_handler:F) where F: Fn(Command) {
                              .help(lformat!("Edit your config"))
                              .short('e')
                              .long("edit")
-                             .action(ArgAction::SetTrue)
-                            )
+                             .action(ArgAction::SetTrue))
 
                         .arg(Arg::new("editor")
                              .help(lformat!("Override the configured editor"))
                              .long("editor")
+                             
                              )
 
                         .arg(Arg::new("show")
                              .help(lformat!("Show a specific config value"))
                              .short('s')
                              .long("show")
+                             
                             )
 
                         .arg(Arg::new("default")
                              .help(lformat!("Show default config"))
                              .short('d')
                              .long("default")
-                             .action(ArgAction::SetTrue)
-                            )
+                             .action(ArgAction::SetTrue))
 
                         .arg(Arg::new("set root")
                              .help(lformat!("set the root folder in the config"))
                              .long("set-root")
+                             
                             )
 
                         .arg(Arg::new("location")
                              .help(lformat!("Show the location of the config file"))
                              .short('l')
                              .long("location")
-                             .action(ArgAction::SetTrue)
-                            )
+                             .action(ArgAction::SetTrue))
 
                         .arg(Arg::new("init")
                              .help(lformat!("Create config file."))
                              .short('i')
                              .long("init")
-                             .action(ArgAction::SetTrue)
-                            )
+                             .action(ArgAction::SetTrue))
 
                         )
 
@@ -802,8 +790,7 @@ pub fn with_cli<F> (app_handler:F) where F: Fn(Command) {
                         .arg(Arg::new("rebase")
                              .help(lformat!("git pull with --rebase"))
                              .long("rebase")
-                             .action(ArgAction::SetTrue)
-                            )
+                             .action(ArgAction::SetTrue))
                        )
 
             .subcommand(Command::new("diff")
@@ -817,19 +804,18 @@ pub fn with_cli<F> (app_handler:F) where F: Fn(Command) {
                              .short('a')
                              .long("archive")
                              .num_args(0..=1)
+                             
                             )
                         .arg(Arg::new("staged")
                              .help(lformat!("Changes between the index and your last commit"))
                              .long("staged")
                              .alias("cached")
-                             .action(ArgAction::SetTrue)
-                            )
+                             .action(ArgAction::SetTrue))
                         .arg(Arg::new("template")
                              .help(lformat!("A template"))
                              .short('t')
                              .long("template")
-                             .action(ArgAction::SetTrue)
-                            )
+                             .action(ArgAction::SetTrue))
                        )
 
             .subcommand(Command::new("add")
@@ -843,13 +829,13 @@ pub fn with_cli<F> (app_handler:F) where F: Fn(Command) {
                              .short('a')
                              .long("archive")
                              .num_args(0..=1)
+                             
                             )
                         .arg(Arg::new("template")
                              .help(lformat!("A template"))
                              .short('t')
                              .long("template")
-                             .action(ArgAction::SetTrue)
-                            )
+                             .action(ArgAction::SetTrue))
                         .arg(Arg::new("all")
                              .help(lformat!("Add all projects"))
                              .short('A')
@@ -879,13 +865,13 @@ pub fn with_cli<F> (app_handler:F) where F: Fn(Command) {
                              .short('a')
                              .long("archive")
                              .num_args(0..=1)
+                             
                             )
                         .arg(Arg::new("template")
                              .help(lformat!("A template"))
                              .short('t')
                              .long("template")
-                             .action(ArgAction::SetTrue)
-                            )
+                             .action(ArgAction::SetTrue))
                        )
 
             .subcommand(Command::new("stash").about(lformat!("equals git stash")))
@@ -903,13 +889,13 @@ pub fn with_cli<F> (app_handler:F) where F: Fn(Command) {
                              .short('a')
                              .long("archive")
                              .num_args(0..=1)
+                             
                             )
                         .arg(Arg::new("template")
                              .help(lformat!("A template"))
                              .short('t')
                              .long("template")
-                             .action(ArgAction::SetTrue)
-                            )
+                             .action(ArgAction::SetTrue))
                        )
 
             .subcommand(Command::new("remote")
@@ -922,6 +908,7 @@ pub fn with_cli<F> (app_handler:F) where F: Fn(Command) {
                         .arg(Arg::new("shell")
                              .help(lformat!("what shell to generate completion for (bash, zsh, fish,PowerShell)"))
                              .num_args(0..=1)
+                             
                              .value_name("shell")
                             )
 
@@ -936,44 +923,44 @@ pub fn with_cli<F> (app_handler:F) where F: Fn(Command) {
                         .help(lformat!("show also build information"))
                         .long("verbose")
                         .short('v')
-                        .action(ArgAction::SetTrue)
-                    )
+                             .action(ArgAction::SetTrue))
                 .arg(Arg::new("json")
                         .help(lformat!("show verbose version as json"))
                         .long("json")
-                        .action(ArgAction::SetTrue)
-                    )
+                             .action(ArgAction::SetTrue))
             )
 
             .subcommand(Command::new("doc")
                 .about(lformat!("Opens the online documentation, please read it"))
             )
 
-            .subcommand(Command::new("web")
-                .about(lformat!("Opens the WebInterface 🤯"))
-            )
 
             .subcommand(Command::new("asciii")
-                        // NOTE: no `asciii` alias here, that is the command's own name
                         .aliases(["asci", "ascii"])
-                        .arg(Arg::new("anything").num_args(0..))
+                        .arg(Arg::new("anything").num_args(0..).allow_hyphen_values(true))
                         .hide(true)
             )
 
             .subcommand(Command::new("nocommand")
                         .aliases([ "shit", "fuck", "git" ])
-                        .arg(Arg::new("anything").num_args(0..))
+                        .arg(Arg::new("anything").num_args(0..).allow_hyphen_values(true))
                         .hide(true)
             )
 
             .subcommand(Command::new("notashell")
-                        // NOTE: no `git` alias here, `nocommand` already claims it
-                        .aliases(["cp", "cd", "mv", "source", "ssh" ])
-                        .arg(Arg::new("anything").num_args(0..))
+                        .aliases(["cp", "cd", "mv", "source", "ssh"])
+                        .arg(Arg::new("anything").num_args(0..).allow_hyphen_values(true))
                         .hide(true)
             )
 
-        );
+        ;
+
+    #[cfg(feature = "tui")]
+    let app = app.subcommand(Command::new("tui")
+        .about(lformat!("Interactive terminal interface with dashboard"))
+    );
+
+    app_handler(app);
 }
 
 /// Starting point for handling commandline matches
@@ -1007,7 +994,6 @@ pub fn match_matches(matches: &ArgMatches) {
      Some(("spec",      sub_m)) => subcommands::spec(sub_m),
 
      Some(("doc",       _          )) => subcommands::doc(),
-     Some(("web",       _          )) => subcommands::web(),
      Some(("version",   sub_m)) => subcommands::version(sub_m),
 
      Some(("dues",      sub_m)) => subcommands::dues(sub_m),
@@ -1025,6 +1011,8 @@ pub fn match_matches(matches: &ArgMatches) {
      Some(("pop",       _          )) => subcommands::git_stash_pop(),
      Some(("log",       sub_m)) => subcommands::git_log(sub_m),
      Some(("complete",  sub_m)) => generate_completions(sub_m),
+     #[cfg(feature = "tui")]
+     Some(("tui",       _          )) => crate::tui::run(),
      _                          => Err(format_err!("unhandled command"))
     };
     if let Err(e) = res {
@@ -1050,15 +1038,10 @@ pub fn generate_completions(matches: &ArgMatches) -> Result<(), Error> {
 pub mod validators {
     use asciii::util::yaml::parse_dmy_date;
 
-    // clap 4 validates while parsing, so these hand back the value they checked
     pub fn is_dmy(val: &str) -> Result<String, String> {
         match parse_dmy_date(val) {
             Some(_) => Ok(val.to_owned()),
             None => Err(lformat!("Date Format must be DD.MM.YYYY")),
         }
-    }
-
-    pub fn is_year(val: &str) -> Result<String, String> {
-        val.parse::<i32>().map(|_ok| val.to_owned()).map_err(|e| e.to_string())
     }
 }

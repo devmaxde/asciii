@@ -33,7 +33,7 @@ pub fn open(path: &Path) -> Result<Yaml, anyhow::Error> {
 /// Ruby like API to yaml-rust.
 pub fn parse(file_content: &str) -> Result<Yaml, anyhow::Error> {
     Ok(YamlLoader::load_from_str(file_content)?
-        .get(0)
+        .first()
         .map(ToOwned::to_owned)
         .unwrap_or_else(|| Yaml::from_str("[]")))
 }
@@ -138,10 +138,7 @@ pub fn get_dmy(yaml: &Yaml, key: &str) -> Option<Date<Utc>> {
 /// and replaces `Yaml::Null` and `Yaml::BadValue`.
 //#[deprecated(note="use `ProvidesData` instead")]
 pub fn get<'a>(yaml: &'a Yaml, key: &str) -> Option<&'a Yaml> {
-    let path = key
-        .split(|c| c == '/' || c == '.')
-        .filter(|k| !k.is_empty())
-        .collect::<Vec<&str>>();
+    let path = key.split(['/', '.']).filter(|k| !k.is_empty()).collect::<Vec<&str>>();
     match get_path(yaml, &path) {
         Some(&(Yaml::Null | Yaml::BadValue)) => None,
         content => content,

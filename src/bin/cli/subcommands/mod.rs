@@ -7,10 +7,11 @@ use std::{
     path::{Path, PathBuf},
 };
 
-use anyhow::{bail, format_err, Context, Error};
+use anyhow::{bail, format_err, Error};
 use chrono::prelude::*;
 use clap::ArgMatches;
-use crate::cli::ArgMatchesExt as _;
+
+use crate::cli::ArgMatchesExt;
 use yaml_rust::Yaml;
 
 use asciii::{
@@ -357,15 +358,10 @@ pub fn set(m: &ArgMatches) -> Result<(), Error> {
 /// Command INVOICE
 pub fn invoice(m: &ArgMatches) -> Result<(), Error> {
     let storage = setup::<Project>()?;
-    let dir = StorageDir::Year(Utc::today().year());
-    let projects = storage.open_projects(dir)?;
-    let invoice_number = 1 + projects
-        .iter()
-        .filter_map(|p| p.field("invoice/number"))
-        .map(|s| s.parse::<u32>())
-        .filter_map(Result::ok)
-        .max()
-        .unwrap_or(0);
+    // numbers are unique per year of the invoice date, so look at every project, archived ones too
+    let projects = storage.open_projects(StorageDir::All)?;
+    let projects: Vec<&Project> = projects.iter().collect();
+    let invoice_number = asciii::stats::next_invoice_number(&projects, Utc::today().year());
     let value = invoice_number.to_string();
 
     let (search_terms, dir) = matches_to_search(m);
@@ -417,7 +413,7 @@ fn infer_bill_type(m: &ArgMatches) -> Option<BillType> {
 }
 
 #[cfg(feature = "document_export")]
-fn matches_to_export_config(m: &ArgMatches) -> Option<ExportConfig> {
+fn matches_to_export_config(m: &ArgMatches) -> Option<ExportConfig<'_>> {
     let template_name = m
         .value_of("template")
         .or_else(|| CONFIG.get("document_export/default_template").and_then(Yaml::as_str))
@@ -619,13 +615,6 @@ pub fn doc() -> Result<(), Error> {
 }
 
 /// Command WEB
-pub fn web() -> Result<(), Error> {
-    std::process::Command::new("asciii-web")
-        .status()
-        .context("asciii-web wasn't found, it's likely not installed correctly")?;
-    Ok(())
-}
-
 /// Command VERSION
 pub fn version(matches: &ArgMatches) -> Result<(), Error> {
     if matches.is_present("verbose") {

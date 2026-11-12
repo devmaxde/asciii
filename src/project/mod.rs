@@ -73,7 +73,7 @@ impl Project {
     }
 
     /// Opens a project from file path;
-    pub fn open<S: AsRef<OsStr> + std::fmt::Debug + ?Sized>(pathish: &S) -> Result<Project, Error> {
+    pub fn open<S: AsRef<OsStr> + fmt::Debug + ?Sized>(pathish: &S) -> Result<Project, Error> {
         log::trace!("Project::open({:?});", pathish);
         let file_path = Path::new(&pathish);
         let file_content = fs::read_to_string(file_path)?;
@@ -96,11 +96,11 @@ impl Project {
             .and(<dyn Redeemable>::validate(&project));
 
         if !validation.validation_errors.is_empty() {
-            let name = project.short_desc();
-            log::warn!("project {:?}:", name);
-            for err in validation.validation_errors {
-                println!(" * {}", err);
-            }
+            log::warn!(
+                "project {:?}:\n * {}",
+                project.short_desc(),
+                validation.validation_errors.join("\n * ")
+            );
         }
         Ok(project)
     }
@@ -234,7 +234,7 @@ impl Project {
 
         for items in bill.items_by_tax.values() {
             for (index, item) in items.iter().enumerate() {
-                write!(&mut csv_string, "{};", &index.to_string())?;
+                write!(&mut csv_string, "{};", index.to_string())?;
                 write!(&mut csv_string, "{};", item.product.name)?;
                 write!(&mut csv_string, "{};", item.amount)?;
                 write!(&mut csv_string, "{:.2};", item.product.price.as_float())?;
@@ -520,11 +520,11 @@ pub trait Exportable {
     }
 
     fn offer_file_exists(&self) -> bool {
-        self.offer_file().map_or(false, |f| f.exists())
+        self.offer_file().is_some_and(|f| f.exists())
     }
 
     fn invoice_file_exists(&self) -> bool {
-        self.invoice_file().map_or(false, |f| f.exists())
+        self.invoice_file().is_some_and(|f| f.exists())
     }
 
     fn write_to_path<P: AsRef<OsStr> + fmt::Debug>(content: &str, target: &P) -> Result<(), Error> {
@@ -741,7 +741,7 @@ impl Storable for Project {
     /// Checks against a certain key-val pair.
     fn matches_filter(&self, key: &str, val: &str) -> bool {
         self.field(key)
-            .map_or(false, |c| c.to_lowercase().contains(&val.to_lowercase()))
+            .is_some_and(|c| c.to_lowercase().contains(&val.to_lowercase()))
     }
 
     /// UNIMPLEMENTED: Checks against a certain search term.
@@ -751,7 +751,7 @@ impl Storable for Project {
         let search = term.to_lowercase();
         self.invoice()
             .number_str()
-            .map_or(false, |num| num.to_lowercase().contains(&search))
+            .is_some_and(|num| num.to_lowercase().contains(&search))
             || Storable::short_desc(self).to_lowercase().contains(&search)
     }
 

@@ -1,7 +1,8 @@
 use anyhow::Error;
 use chrono::prelude::*;
 use clap::ArgMatches;
-use crate::cli::ArgMatchesExt as _;
+
+use crate::cli::ArgMatchesExt;
 
 use asciii::print::{self, ListConfig, ListMode};
 use asciii::project::spec::IsProject;

@@ -103,7 +103,7 @@ where
     handlebars.register_escape_fn(|data| data.replace('\n', r"\newline "));
 
     handlebars.register_helper("inc", Box::new(IncHelper));
-    // handlebars.register_helper("count", Box::new(count_helper));
+    handlebars.register_helper("count", Box::new(CountHelper));
 
     handlebars.register_template_file("document", template_path).unwrap();
 
@@ -207,6 +207,11 @@ fn project_to_doc(project: &Project, config: &ExportConfig<'_>) -> Result<Option
     // }
 
     if let (Some(tex_file), Some(dyn_bill)) = (outfile_tex, dyn_bill_type) {
+        let e_invoice = dyn_bill == Invoice && zugferd_enabled();
+        if e_invoice {
+            check_e_invoice(project, dry_run || print_only)?;
+        }
+
         let exported_project: project::export::Complete = project.export();
         let filled = fill_template(&exported_project, dyn_bill, &template_path)?;
 
@@ -296,6 +301,9 @@ fn project_to_doc(project: &Project, config: &ExportConfig<'_>) -> Result<Option
                 let file = if pdffile.exists() { pdffile } else { outfile_path };
                 log::debug!("now there is be a {:?} -> {:?}", file, document_file);
                 fs::rename(&file, &document_file)?;
+                if e_invoice {
+                    attach_e_invoice(project, &document_file)?;
+                }
             } else {
                 bail!(ExportError::NoPdfCreated);
             }
@@ -304,6 +312,57 @@ fn project_to_doc(project: &Project, config: &ExportConfig<'_>) -> Result<Option
     } else {
         bail!(ExportError::NoPdfCreated);
     }
+}
+
+/// Is `document_export/zugferd` switched on?
+fn zugferd_enabled() -> bool {
+    #[cfg(feature = "zugferd")]
+    {
+        crate::zugferd::enabled()
+    }
+    #[cfg(not(feature = "zugferd"))]
+    {
+        let on = crate::CONFIG
+            .get("document_export/zugferd")
+            .and_then(Yaml::as_bool)
+            .unwrap_or(false);
+        if on {
+            log::warn!("document_export/zugferd is set, but this asciii was built without the zugferd feature");
+        }
+        false
+    }
+}
+
+/// Fails before pdflatex runs if the e-invoice cannot be made (only warns on a dry run).
+#[allow(unused_variables)]
+fn check_e_invoice(project: &Project, only_warn: bool) -> Result<(), Error> {
+    #[cfg(feature = "zugferd")]
+    {
+        let missing = crate::zugferd::missing(project);
+        if !missing.is_empty() {
+            let error = crate::zugferd::ZugferdError::Incomplete(missing.join(", "));
+            if only_warn {
+                log::warn!("{}", error);
+            } else {
+                return Err(error.into());
+            }
+        }
+    }
+    Ok(())
+}
+
+/// Writes the ZUGFeRD XML next to the PDF and attaches it.
+#[allow(unused_variables)]
+fn attach_e_invoice(project: &Project, pdf: &Path) -> Result<(), Error> {
+    #[cfg(feature = "zugferd")]
+    {
+        let xml = crate::zugferd::export(project, pdf)?;
+        log::info!(
+            "{}",
+            lformat!("ZUGFeRD e-invoice attached ({})", xml.display())
+        );
+    }
+    Ok(())
 }
 
 #[derive(Debug)]
