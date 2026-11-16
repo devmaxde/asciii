@@ -1,7 +1,7 @@
 use std::{
-    collections::HashMap,
-    fs,
-    path::{Path, PathBuf},
+	collections::HashMap,
+	fs,
+	path::{Path, PathBuf},
 };
 
 use chrono::prelude::*;
@@ -15,101 +15,119 @@ use crate::util;
 
 #[allow(dead_code)]
 pub struct TestProject {
-    file_path: PathBuf,
+	file_path: PathBuf,
 }
 
 impl Storable for TestProject {
-    // creates in tempfile
-    fn from_template(
-        project_name: &str,
-        template: &Path,
-        _fill: &HashMap<&str, String>,
-    ) -> Result<StorableAndTempDir<Self>, Error>
-    where
-        Self: Sized,
-    {
-        // generates a temp file
-        let temp_dir = TempDir::new_in(".", project_name).unwrap();
-        let temp_file = temp_dir.path().join(project_name);
+	// creates in tempfile
+	fn from_template(
+		project_name: &str,
+		template: &Path,
+		_fill: &HashMap<&str, String>,
+	) -> Result<StorableAndTempDir<Self>, Error>
+	where
+		Self: Sized,
+	{
+		// generates a temp file
+		let temp_dir = TempDir::new_in(".", project_name).unwrap();
+		let temp_file = temp_dir.path().join(project_name);
 
-        // just copy over template
-        fs::copy(template, &temp_file)?;
+		// just copy over template
+		fs::copy(template, &temp_file)?;
 
-        // project now lives in the temp_file
-        let project = TestProject { file_path: temp_file };
+		// project now lives in the temp_file
+		let project = TestProject {
+			file_path: temp_file,
+		};
 
-        Ok(StorableAndTempDir {
-            storable: project,
-            temp_dir,
-        })
-    }
+		Ok(StorableAndTempDir {
+			storable: project,
+			temp_dir,
+		})
+	}
 
-    fn short_desc(&self) -> String {
-        self.file().file_stem().unwrap().to_str().unwrap().to_owned()
-    }
-    fn modified_date(&self) -> Option<Date<Utc>> {
-        Some(Utc::today())
-    }
-    fn file(&self) -> PathBuf {
-        self.file_path.to_owned()
-    }
-    fn set_file(&mut self, new_file: &Path) {
-        self.file_path = new_file.to_owned();
-    }
-    fn index(&self) -> Option<String> {
-        Some("ZZ99".into())
-    }
-    fn prefix(&self) -> Option<String> {
-        self.index()
-    }
+	fn short_desc(&self) -> String {
+		self
+			.file()
+			.file_stem()
+			.unwrap()
+			.to_str()
+			.unwrap()
+			.to_owned()
+	}
+	fn modified_date(&self) -> Option<Date<Utc>> {
+		Some(Utc::today())
+	}
+	fn file(&self) -> PathBuf {
+		self.file_path.to_owned()
+	}
+	fn set_file(
+		&mut self,
+		new_file: &Path,
+	) {
+		self.file_path = new_file.to_owned();
+	}
+	fn index(&self) -> Option<String> {
+		Some("ZZ99".into())
+	}
+	fn prefix(&self) -> Option<String> {
+		self.index()
+	}
 
-    fn open_folder(path: &Path) -> Result<Self, Error> {
-        Self::open_file(path)
-    }
+	fn open_folder(path: &Path) -> Result<Self, Error> {
+		Self::open_file(path)
+	}
 
-    fn open_file(path: &Path) -> Result<Self, Error> {
-        Ok(TestProject {
-            file_path: PathBuf::from(path),
-        })
-    }
-    fn matches_filter(&self, _key: &str, _val: &str) -> bool {
-        false
-    }
-    fn matches_search(&self, _term: &str) -> bool {
-        false
-    }
-    fn is_ready_for_archive(&self) -> bool {
-        true
-    }
+	fn open_file(path: &Path) -> Result<Self, Error> {
+		Ok(TestProject {
+			file_path: PathBuf::from(path),
+		})
+	}
+	fn matches_filter(
+		&self,
+		_key: &str,
+		_val: &str,
+	) -> bool {
+		false
+	}
+	fn matches_search(
+		&self,
+		_term: &str,
+	) -> bool {
+		false
+	}
+	fn is_ready_for_archive(&self) -> bool {
+		true
+	}
 }
 
 // TODO: implement failing cases
 const TEST_PROJECTS: [&str; 4] = [
-    "test1",
-    "test2",
-    "foobar",
-    "ich schreibe viel zu längliche projektnamen!",
+	"test1",
+	"test2",
+	"foobar",
+	"ich schreibe viel zu längliche projektnamen!",
 ];
 
 fn setup() -> (TempDir, PathBuf, Storage<TestProject>) {
-    let dir = TempDir::new_in(Path::new("."), "storage_test").unwrap();
-    let storage_path = dir.path().join("storage_test");
-    let storage = Storage::try_new(&storage_path, "working", "archive", "templates").unwrap();
-    (dir, storage_path, storage)
+	let dir = TempDir::new_in(Path::new("."), "storage_test").unwrap();
+	let storage_path = dir.path().join("storage_test");
+	let storage = Storage::try_new(&storage_path, "working", "archive", "templates").unwrap();
+	(dir, storage_path, storage)
 }
 
 fn assert_existence(storage_path: &Path) {
-    assert!(
-        storage_path.exists()
-            && storage_path.join("working").exists()
-            && storage_path.join("archive").exists()
-            && storage_path.join("templates").exists()
-    );
+	assert!(
+		storage_path.exists()
+			&& storage_path.join("working").exists()
+			&& storage_path.join("archive").exists()
+			&& storage_path.join("templates").exists()
+	);
 }
 
 fn copy_template(target: PathBuf) {
-    fs::copy("./templates/default.tyml", target.join("template1.tyml")).unwrap();
-    fs::copy("./templates/default.tyml", target.join("template2.tyml")).unwrap();
+	fs::copy("./templates/default.tyml", target.join("template1.tyml")).unwrap();
+	fs::copy("./templates/default.tyml", target.join("template2.tyml")).unwrap();
 }
 
 #[test]

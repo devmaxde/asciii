@@ -1026,22 +1026,30 @@ pub fn match_matches(matches: &ArgMatches) {
 }
 
 pub fn generate_completions(matches: &ArgMatches) -> Result<(), Error> {
-    if let Some(shell) = matches.value_of("shell").and_then(|s| Shell::from_str(s).ok()) {
-        // with_cli(|mut app| app.gen_completions("asciii", shell, ".") );
-        with_cli(|mut command| clap_complete::generate(shell, &mut command, "asciii", &mut std::io::stdout()));
-    } else {
-        log::error!("{}", lformat!("please specify either bash, zsh, fish or powershell"));
-    }
-    Ok(())
+	if let Some(shell) = matches
+		.value_of("shell")
+		.and_then(|s| Shell::from_str(s).ok())
+	{
+		// with_cli(|mut app| app.gen_completions("asciii", shell, ".") );
+		with_cli(|mut command| {
+			clap_complete::generate(shell, &mut command, "asciii", &mut std::io::stdout())
+		});
+	} else {
+		log::error!(
+			"{}",
+			lformat!("please specify either bash, zsh, fish or powershell")
+		);
+	}
+	Ok(())
 }
 
 pub mod validators {
-    use asciii::util::yaml::parse_dmy_date;
+	use asciii::util::yaml::parse_dmy_date;
 
-    pub fn is_dmy(val: &str) -> Result<String, String> {
-        match parse_dmy_date(val) {
-            Some(_) => Ok(val.to_owned()),
-            None => Err(lformat!("Date Format must be DD.MM.YYYY")),
-        }
-    }
+	pub fn is_dmy(val: &str) -> Result<String, String> {
+		match parse_dmy_date(val) {
+			Some(_) => Ok(val.to_owned()),
+			None => Err(lformat!("Date Format must be DD.MM.YYYY")),
+		}
+	}
 }

@@ -1,8 +1,7 @@
-use asciii::actions::calendar_and_tasks as calendar;
-use asciii::storage::StorageDir;
+use asciii::{actions::calendar_and_tasks as calendar, storage::StorageDir};
 
 fn main() {
-    let dir = StorageDir::All;
+	let dir = StorageDir::All;
 
-    println!("{}", calendar(dir).unwrap())
+	println!("{}", calendar(dir).unwrap())
 }

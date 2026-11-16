@@ -1,53 +1,54 @@
 #![allow(dead_code, unused_variables)]
 #[cfg(feature = "git_statuses")]
 use std::collections::HashMap;
-use std::fmt;
-use std::path::{Path, PathBuf};
-use std::process::{Command, ExitStatus};
+use std::{
+	fmt,
+	path::{Path, PathBuf},
+	process::{Command, ExitStatus},
+};
 
 #[cfg(not(feature = "git_statuses"))]
 use std::error::Error;
 
-use prettytable::color::Color;
-use prettytable::{color, Attr};
+use prettytable::{color, color::Color, Attr};
 
 /// More Rustacious way of representing a git status
 #[derive(Debug, Clone)]
 pub enum GitStatus {
-    IndexNew,
-    IndexModified,
-    IndexDeleted,
-    IndexRenamed,
-    IndexTypechange,
-    WorkingNew,
-    WorkingModified,
-    WorkingDeleted,
-    WorkingTypechange,
-    WorkingRenamed,
-    Ignored,
-    Conflict,
-    Current,
-    Unknown,
+	IndexNew,
+	IndexModified,
+	IndexDeleted,
+	IndexRenamed,
+	IndexTypechange,
+	WorkingNew,
+	WorkingModified,
+	WorkingDeleted,
+	WorkingTypechange,
+	WorkingRenamed,
+	Ignored,
+	Conflict,
+	Current,
+	Unknown,
 }
 
 impl GitStatus {
-    pub fn to_format(&self) -> Attr {
-        //Bold,
-        //Dim,
-        //Italic(bool),
-        //Underline(bool),
-        //Blink,
-        //Standout(bool),
-        //Reverse,
-        //Secure,
-        //ForegroundColor(Color),
-        //BackgroundColor(Color),
+	pub fn to_format(&self) -> Attr {
+		// Bold,
+		// Dim,
+		// Italic(bool),
+		// Underline(bool),
+		// Blink,
+		// Standout(bool),
+		// Reverse,
+		// Secure,
+		// ForegroundColor(Color),
+		// BackgroundColor(Color),
 
-        Attr::Reverse
-    }
+		Attr::Reverse
+	}
 
     #[rustfmt::skip]
-    pub fn to_style(&self) -> (Color,Option<Attr>) {
+	pub fn to_style(&self) -> (Color,Option<Attr>) {
         match *self{
         // => write!(f, "{:?}",  self)
          GitStatus::Current         => (color::BLUE,    None),
@@ -63,8 +64,8 @@ impl GitStatus {
 }
 
 impl fmt::Display for GitStatus {
-    #[rustfmt::skip]
-    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+	#[rustfmt::skip]
+	fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         match *self{
         // => write!(f, "{:?}", self)
          GitStatus::Conflict        => write!(f, "~"),
@@ -107,162 +108,194 @@ impl From<git2::Status> for GitStatus{
 /// Convenience Wrapper for `git2::Repository`
 #[cfg(feature = "git_statuses")]
 pub struct Repository {
-    /// Git Repository for StorageDir
-    pub repo: git2::Repository,
-    pub workdir: PathBuf,
-    /// Maps GitStatus to each path
-    pub statuses: HashMap<PathBuf, GitStatus>,
+	/// Git Repository for StorageDir
+	pub repo: git2::Repository,
+	pub workdir: PathBuf,
+	/// Maps GitStatus to each path
+	pub statuses: HashMap<PathBuf, GitStatus>,
 }
 
 /// Convenience Wrapper for `git2::Repository`
 #[cfg(not(feature = "git_statuses"))]
 pub struct Repository {
-    /// Git Repository for StorageDir
-    pub workdir: PathBuf,
+	/// Git Repository for StorageDir
+	pub workdir: PathBuf,
 }
 
 impl Repository {
-    #[cfg(feature = "git_statuses")]
-    pub fn try_new(path: &Path) -> Result<Self, git2::Error> {
-        let repo = git2::Repository::open(path)?;
-        let statuses = Self::cache_statuses(&repo)?;
-        Ok(Repository {
-            repo,
-            workdir: path.to_owned(),
-            statuses,
-        })
-    }
+	#[cfg(feature = "git_statuses")]
+	pub fn try_new(path: &Path) -> Result<Self, git2::Error> {
+		let repo = git2::Repository::open(path)?;
+		let statuses = Self::cache_statuses(&repo)?;
+		Ok(Repository {
+			repo,
+			workdir: path.to_owned(),
+			statuses,
+		})
+	}
 
-    #[cfg(not(feature = "git_statuses"))]
-    pub fn try_new(path: &Path) -> Result<Self, GitError> {
-        Ok(Repository {
-            workdir: path.to_owned(),
-        })
-    }
+	#[cfg(not(feature = "git_statuses"))]
+	pub fn try_new(path: &Path) -> Result<Self, GitError> {
+		Ok(Repository {
+			workdir: path.to_owned(),
+		})
+	}
 
-    #[cfg(feature = "git_statuses")]
-    fn cache_statuses(repo: &git2::Repository) -> Result<HashMap<PathBuf, GitStatus>, git2::Error> {
-        let repo_path = repo.path().parent().unwrap().to_owned();
+	#[cfg(feature = "git_statuses")]
+	fn cache_statuses(repo: &git2::Repository) -> Result<HashMap<PathBuf, GitStatus>, git2::Error> {
+		let repo_path = repo.path().parent().unwrap().to_owned();
 
-        let git_statuses = repo.statuses(Some(
-            git2::StatusOptions::new()
-                .include_ignored(false)
-                .include_untracked(true),
-        ))?;
+		let git_statuses = repo.statuses(Some(
+			git2::StatusOptions::new()
+				.include_ignored(false)
+				.include_untracked(true),
+		))?;
 
-        let mut statuses: HashMap<PathBuf, GitStatus> = HashMap::new();
+		let mut statuses: HashMap<PathBuf, GitStatus> = HashMap::new();
 
-        for entry in git_statuses.iter() {
-            let status: GitStatus = entry.status().into();
+		for entry in git_statuses.iter() {
+			let status: GitStatus = entry.status().into();
 
-            // git2 >= 0.20 returns `Result` here instead of `Option`, non-utf8 paths are an error
-            if let Ok(path) = entry.path() {
-                let path = repo_path.join(PathBuf::from(path));
-                if path.is_file() {
-                    if let Some(parent) = path.parent() {
-                        statuses.insert(parent.to_path_buf(), status.to_owned());
-                    }
-                }
-                statuses.insert(path, status);
-            }
-        }
+			// git2 >= 0.20 returns `Result` here instead of `Option`, non-utf8 paths are an
+			// error
+			if let Ok(path) = entry.path() {
+				let path = repo_path.join(PathBuf::from(path));
+				if path.is_file() {
+					if let Some(parent) = path.parent() {
+						statuses.insert(parent.to_path_buf(), status.to_owned());
+					}
+				}
+				statuses.insert(path, status);
+			}
+		}
 
-        Ok(statuses)
-    }
+		Ok(statuses)
+	}
 
-    /// Returns the status to a given path
-    #[cfg(feature = "git_statuses")]
-    pub fn get_status(&self, path: &Path) -> GitStatus {
-        self.statuses.get(path).unwrap_or(&GitStatus::Unknown).to_owned()
-    }
+	/// Returns the status to a given path
+	#[cfg(feature = "git_statuses")]
+	pub fn get_status(
+		&self,
+		path: &Path,
+	) -> GitStatus {
+		self
+			.statuses
+			.get(path)
+			.unwrap_or(&GitStatus::Unknown)
+			.to_owned()
+	}
 
-    /// INERT: Returns the status to a given path
-    #[cfg(not(feature = "git_statuses"))]
-    pub fn get_status(&self, path: &Path) -> GitStatus {
-        GitStatus::Unknown
-    }
+	/// INERT: Returns the status to a given path
+	#[cfg(not(feature = "git_statuses"))]
+	pub fn get_status(
+		&self,
+		path: &Path,
+	) -> GitStatus {
+		GitStatus::Unknown
+	}
 
-    fn execute_git(&self, command: &str, args: &[&str], paths: &[PathBuf]) -> ExitStatus {
-        let gitdir = self.workdir.join(".git");
-        log::debug!(
-            "{:?}",
-            Command::new("git")
-                .args(["--work-tree", self.workdir.to_str().unwrap()])
-                .args(["--git-dir", gitdir.to_str().unwrap()])
-                .arg(command)
-                .args(args)
-                .args(paths)
-        );
+	fn execute_git(
+		&self,
+		command: &str,
+		args: &[&str],
+		paths: &[PathBuf],
+	) -> ExitStatus {
+		let gitdir = self.workdir.join(".git");
+		log::debug!(
+			"{:?}",
+			Command::new("git")
+				.args(["--work-tree", self.workdir.to_str().unwrap()])
+				.args(["--git-dir", gitdir.to_str().unwrap()])
+				.arg(command)
+				.args(args)
+				.args(paths)
+		);
 
-        Command::new("git")
-            .args(["--work-tree", self.workdir.to_str().unwrap()])
-            .args(["--git-dir", gitdir.to_str().unwrap()])
-            .arg(command)
-            .args(args)
-            .args(paths)
-            .status()
-            .unwrap_or_else(|e| panic!("failed to execute process: {}", e))
-    }
+		Command::new("git")
+			.args(["--work-tree", self.workdir.to_str().unwrap()])
+			.args(["--git-dir", gitdir.to_str().unwrap()])
+			.arg(command)
+			.args(args)
+			.args(paths)
+			.status()
+			.unwrap_or_else(|e| panic!("failed to execute process: {}", e))
+	}
 
-    pub fn add(&self, paths: &[PathBuf]) -> ExitStatus {
-        log::info!("adding to git: {:?}", paths);
-        self.execute_git("add", &[], paths)
-    }
+	pub fn add(
+		&self,
+		paths: &[PathBuf],
+	) -> ExitStatus {
+		log::info!("adding to git: {:?}", paths);
+		self.execute_git("add", &[], paths)
+	}
 
-    pub fn add_all(&self) -> ExitStatus {
-        log::info!("adding all to git");
-        self.execute_git("add", &["--all"], &[])
-    }
+	pub fn add_all(&self) -> ExitStatus {
+		log::info!("adding all to git");
+		self.execute_git("add", &["--all"], &[])
+	}
 
-    pub fn commit(&self) -> ExitStatus {
-        // TODO: override git editor with asciii editor
-        self.execute_git("commit", &[], &[])
-    }
+	pub fn commit(&self) -> ExitStatus {
+		// TODO: override git editor with asciii editor
+		self.execute_git("commit", &[], &[])
+	}
 
-    pub fn status(&self) -> ExitStatus {
-        self.execute_git("status", &[], &[])
-    }
+	pub fn status(&self) -> ExitStatus {
+		self.execute_git("status", &[], &[])
+	}
 
-    pub fn checkout(&self, paths: &[PathBuf]) -> ExitStatus {
-        self.execute_git("checkout", &[], paths)
-    }
+	pub fn checkout(
+		&self,
+		paths: &[PathBuf],
+	) -> ExitStatus {
+		self.execute_git("checkout", &[], paths)
+	}
 
-    pub fn clean(&self, paths: &[PathBuf]) -> ExitStatus {
-        self.execute_git("clean", &["-d", "--force"], paths)
-    }
+	pub fn clean(
+		&self,
+		paths: &[PathBuf],
+	) -> ExitStatus {
+		self.execute_git("clean", &["-d", "--force"], paths)
+	}
 
-    /// TODO: not yet functional
-    pub fn stash(&self) -> ExitStatus {
-        self.execute_git("stash", &[], &[])
-    }
+	/// TODO: not yet functional
+	pub fn stash(&self) -> ExitStatus {
+		self.execute_git("stash", &[], &[])
+	}
 
-    pub fn stash_pop(&self) -> ExitStatus {
-        self.execute_git("stash", &["pop"], &[])
-    }
+	pub fn stash_pop(&self) -> ExitStatus {
+		self.execute_git("stash", &["pop"], &[])
+	}
 
-    pub fn push(&self) -> ExitStatus {
-        self.execute_git("push", &["origin", "master"], &[])
-    }
+	pub fn push(&self) -> ExitStatus {
+		self.execute_git("push", &["origin", "master"], &[])
+	}
 
-    pub fn diff(&self, paths: &[PathBuf], flags: &[&str]) -> ExitStatus {
-        self.execute_git("diff", flags, paths)
-    }
+	pub fn diff(
+		&self,
+		paths: &[PathBuf],
+		flags: &[&str],
+	) -> ExitStatus {
+		self.execute_git("diff", flags, paths)
+	}
 
-    pub fn pull(&self) -> ExitStatus {
-        self.execute_git("pull", &["origin", "master"], &[])
-    }
+	pub fn pull(&self) -> ExitStatus {
+		self.execute_git("pull", &["origin", "master"], &[])
+	}
 
-    pub fn pull_rebase(&self) -> ExitStatus {
-        self.execute_git("pull", &["origin", "master", "--rebase"], &[])
-    }
+	pub fn pull_rebase(&self) -> ExitStatus {
+		self.execute_git("pull", &["origin", "master", "--rebase"], &[])
+	}
 
-    pub fn remote(&self) -> ExitStatus {
-        self.execute_git("remote", &[], &[])
-    }
+	pub fn remote(&self) -> ExitStatus {
+		self.execute_git("remote", &[], &[])
+	}
 
-    pub fn log(&self, paths: &[PathBuf]) -> ExitStatus {
-        self.execute_git("log", &[ "--graph", "--pretty=format:'%Cred%h%Creset -%C(bold yellow)%d%Creset %C() %s %C(reset) ( %C(yellow)%an%Creset %C(green)%cr )'", "--abbrev-commit", "--date=relative" ], paths)
-    }
+	pub fn log(
+		&self,
+		paths: &[PathBuf],
+	) -> ExitStatus {
+		self.execute_git("log", &[ "--graph", "--pretty=format:'%Cred%h%Creset -%C(bold yellow)%d%Creset %C() %s %C(reset) ( %C(yellow)%an%Creset %C(green)%cr )'", "--abbrev-commit", "--date=relative" ], paths)
+	}
 }
 
 #[cfg(not(feature = "git_statuses"))]
@@ -274,7 +307,10 @@ impl Error for GitError {}
 
 #[cfg(not(feature = "git_statuses"))]
 impl fmt::Display for GitError {
-    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
-        write!(f, "git statuses is not a features of this build")
-    }
+	fn fmt(
+		&self,
+		f: &mut fmt::Formatter,
+	) -> fmt::Result {
+		write!(f, "git statuses is not a features of this build")
+	}
 }

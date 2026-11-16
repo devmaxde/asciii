@@ -16,88 +16,98 @@ use crate::util::{to_currency, yaml};
 #[derive(Copy, Clone, Debug)]
 #[cfg_attr(feature = "serialization", derive(Serialize))]
 pub struct Product<'a> {
-    pub name: &'a str,
-    pub unit: Option<&'a str>,
-    pub tax: Tax,
-    pub price: Currency,
+	pub name: &'a str,
+	pub unit: Option<&'a str>,
+	pub tax: Tax,
+	pub price: Currency,
 }
 
 #[derive(Error, Debug)]
 pub enum ProductError {
-    #[error("Invalid price in {}", _0)]
-    InvalidPrice(String),
+	#[error("Invalid price in {}", _0)]
+	InvalidPrice(String),
 
-    #[error("unknown format")]
-    UnknownFormat,
-    #[error("more {:?} returned than provided", _0)]
-    AmbiguousAmounts(String),
+	#[error("unknown format")]
+	UnknownFormat,
+	#[error("more {:?} returned than provided", _0)]
+	AmbiguousAmounts(String),
 
-    #[error("missing amount of {:?}", _0)]
-    MissingAmount(String),
+	#[error("missing amount of {:?}", _0)]
+	MissingAmount(String),
 
-    #[error("too much returned of {:?}", _0)]
-    TooMuchReturned(String),
+	#[error("too much returned of {:?}", _0)]
+	TooMuchReturned(String),
 
-    #[error("Cannot Parse Service")]
-    InvalidServerSection,
+	#[error("Cannot Parse Service")]
+	InvalidServerSection,
 }
 
 impl<'a> Product<'a> {
-    fn from_old_format<'y>(
-        name: &'y str,
-        values: &'y yaml::Yaml,
-        local_tax: Option<Tax>,
-    ) -> Result<Product<'y>, ProductError> {
-        let default_tax = crate::CONFIG
-            .get_f64("defaults/tax")
-            .map(Tax::new)
-            .expect("Faulty config: field defaults/tax does not contain a value");
+	fn from_old_format<'y>(
+		name: &'y str,
+		values: &'y yaml::Yaml,
+		local_tax: Option<Tax>,
+	) -> Result<Product<'y>, ProductError> {
+		let default_tax = crate::CONFIG
+			.get_f64("defaults/tax")
+			.map(Tax::new)
+			.expect("Faulty config: field defaults/tax does not contain a value");
 
-        let product_tax = yaml::get_f64(values, "tax").map(Tax::new);
-        let tax = product_tax.or(local_tax).unwrap_or(default_tax);
+		let product_tax = yaml::get_f64(values, "tax").map(Tax::new);
+		let tax = product_tax.or(local_tax).unwrap_or(default_tax);
 
-        let unit = yaml::get_str(values, "unit");
-        let price = yaml::get_f64(values, "price")
-            .map(to_currency)
-            .ok_or_else(|| ProductError::InvalidPrice(name.to_string()))?;
+		let unit = yaml::get_str(values, "unit");
+		let price = yaml::get_f64(values, "price")
+			.map(to_currency)
+			.ok_or_else(|| ProductError::InvalidPrice(name.to_string()))?;
 
-        Ok(Product { name, unit, tax, price })
-    }
+		Ok(Product {
+			name,
+			unit,
+			tax,
+			price,
+		})
+	}
 
-    fn from_new_format<'y>(
-        desc: &'y yaml::Yaml,
-        values: &'y yaml::Yaml,
-        local_tax: Option<Tax>,
-    ) -> Result<Product<'y>, ProductError> {
-        let default_tax = crate::CONFIG
-            .get_f64("defaults/tax")
-            .map(Tax::new)
-            .expect("Faulty config: field defaults/tax does not contain a value");
+	fn from_new_format<'y>(
+		desc: &'y yaml::Yaml,
+		values: &'y yaml::Yaml,
+		local_tax: Option<Tax>,
+	) -> Result<Product<'y>, ProductError> {
+		let default_tax = crate::CONFIG
+			.get_f64("defaults/tax")
+			.map(Tax::new)
+			.expect("Faulty config: field defaults/tax does not contain a value");
 
-        let desc_tax = yaml::get_f64(desc, "tax").map(Tax::new);
-        let values_tax = yaml::get_f64(values, "tax").map(Tax::new);
-        let tax = values_tax.or(desc_tax).or(local_tax).unwrap_or(default_tax);
+		let desc_tax = yaml::get_f64(desc, "tax").map(Tax::new);
+		let values_tax = yaml::get_f64(values, "tax").map(Tax::new);
+		let tax = values_tax.or(desc_tax).or(local_tax).unwrap_or(default_tax);
 
-        let name = yaml::get_str(desc, "name").unwrap_or("unnamed");
-        let price = yaml::get_f64(desc, "price")
-            .ok_or_else(|| ProductError::InvalidPrice(name.to_string()))
-            .map(to_currency)?;
-        let unit = yaml::get_str(desc, "unit");
+		let name = yaml::get_str(desc, "name").unwrap_or("unnamed");
+		let price = yaml::get_f64(desc, "price")
+			.ok_or_else(|| ProductError::InvalidPrice(name.to_string()))
+			.map(to_currency)?;
+		let unit = yaml::get_str(desc, "unit");
 
-        Ok(Product { name, unit, tax, price })
-    }
+		Ok(Product {
+			name,
+			unit,
+			tax,
+			price,
+		})
+	}
 
-    pub fn from_desc_and_value<'y>(
-        desc: &'y yaml::Yaml,
-        values: &'y yaml::Yaml,
-        local_tax: Option<Tax>,
-    ) -> Result<Product<'y>, ProductError> {
-        match *desc {
-            yaml::Yaml::String(ref name) => Self::from_old_format(name, values, local_tax),
-            yaml::Yaml::Hash(_) => Self::from_new_format(desc, values, local_tax),
-            _ => Err(ProductError::UnknownFormat),
-        }
-    }
+	pub fn from_desc_and_value<'y>(
+		desc: &'y yaml::Yaml,
+		values: &'y yaml::Yaml,
+		local_tax: Option<Tax>,
+	) -> Result<Product<'y>, ProductError> {
+		match *desc {
+			yaml::Yaml::String(ref name) => Self::from_old_format(name, values, local_tax),
+			yaml::Yaml::Hash(_) => Self::from_new_format(desc, values, local_tax),
+			_ => Err(ProductError::UnknownFormat),
+		}
+	}
 }
 
 #[rustfmt::skip]

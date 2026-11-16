@@ -13,20 +13,20 @@ pub mod cli;
 pub mod tui;
 
 fn setup_locale() {
-    if let Ok(env_lang) = env::var("LANG") {
-        if env_lang.starts_with("de") {
-            set_lang("de");
-        }
-    }
+	if let Ok(env_lang) = env::var("LANG") {
+		if env_lang.starts_with("de") {
+			set_lang("de");
+		}
+	}
 }
 
 fn main() {
-    color_backtrace::install();
-    #[cfg(feature = "tui")]
-    tui::logger::init();
-    #[cfg(not(feature = "tui"))]
-    asciii::util::setup_log();
-    setup_locale();
+	color_backtrace::install();
+	#[cfg(feature = "tui")]
+	tui::logger::init();
+	#[cfg(not(feature = "tui"))]
+	asciii::util::setup_log();
+	setup_locale();
 
-    cli::with_cli(|app| cli::match_matches(&app.get_matches()));
+	cli::with_cli(|app| cli::match_matches(&app.get_matches()));
 }
